@@ -77,7 +77,13 @@ a{color:#121417}a:hover{color:#8a6a3e}
 @media (min-width: 1600px){.vc-stage{transform:scale(1)}.vc-hero-rings{height:460px!important}}
 @media (min-width: 2000px){.vc-stage{transform:scale(1.2)}.vc-hero-rings{height:560px!important}}
 @media (prefers-reduced-motion: reduce){.vc-orbit-a,.vc-orbit-b,.vc-orbit-c,.vc-chip,.vc-rise,.vc-spin,.vc-spin-back,.vc-float,.vc-float-alt,.vc-breathe,.vc-rail,.vc-spark,.vc-node,.vc-orb,.vc-dash{animation:none}.vc-dash{stroke-dashoffset:0}}
+@keyframes stFill{from{width:0}to{width:100%}}
+.st-progress{animation:stFill 5s linear both}
+@keyframes stIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.st-panel{animation:stIn .6s cubic-bezier(.2,.7,.2,1) both}
+@media (max-width: 760px){.st-chart{display:none}}
 </style>
+<style>[hidden]{display:none!important}</style>
 </head>
 <body>
 <div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden">
@@ -94,90 +100,140 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </nav>
 </div>
 </header>
-<section style="position: relative; overflow: hidden; background: #0f1114; color: #ffffff; padding: clamp(72px, 8vw, 130px) 0 clamp(120px, 12vw, 220px)">
-<svg aria-hidden="true" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" style="position: absolute; inset: 0; width: 100%; height: 100%">
-<g transform="translate(160 230) scale(0.9)">
-<path d="M0,560 C200,555 300,520 420,470 S640,380 760,330 S1000,220 1120,160 S1340,60 1440,30 L1440,700 L0,700 Z" fill="#d4b483" fill-opacity="0.07"></path>
-<path d="M0,560 C200,555 300,520 420,470 S640,380 760,330 S1000,220 1120,160 S1340,60 1440,30" fill="none" stroke="#2e3138" stroke-width="2"></path>
-<path d="M0,560 C200,555 300,520 420,470 S640,380 760,330 S1000,220 1120,160 S1340,60 1440,30" pathLength="100" fill="none" stroke="#d4b483" stroke-width="2.5" stroke-dasharray="100" stroke-dashoffset="100"><animate attributeName="stroke-dashoffset" values="100;0;0;100" keyTimes="0;0.55;0.9;1" dur="9s" repeatCount="indefinite"></animate></path>
-<g><circle r="16" fill="#d4b483" fill-opacity="0.2"></circle><circle r="6" fill="#ffffff"></circle><animateMotion dur="9s" repeatCount="indefinite" keyPoints="0;1;1;0" keyTimes="0;0.55;0.9;1" calcMode="linear" path="M0,560 C200,555 300,520 420,470 S640,380 760,330 S1000,220 1120,160 S1340,60 1440,30"></animateMotion></g>
-<circle cx="150" cy="540" r="6" fill="#0f1114" stroke="#d4b483" stroke-width="1.5"></circle><circle cx="150" cy="540" r="3.3" fill="#d4b483" opacity="0.25"><animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.057;0.087;0.9;1" dur="9s" repeatCount="indefinite"></animate></circle>
-<circle cx="420" cy="470" r="9" fill="#0f1114" stroke="#d4b483" stroke-width="1.5"></circle><circle cx="420" cy="470" r="5.0" fill="#d4b483" opacity="0.25"><animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.160;0.190;0.9;1" dur="9s" repeatCount="indefinite"></animate></circle>
-<circle cx="760" cy="330" r="12" fill="#0f1114" stroke="#d4b483" stroke-width="1.5"></circle><circle cx="760" cy="330" r="6.6" fill="#d4b483" opacity="0.25"><animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.290;0.320;0.9;1" dur="9s" repeatCount="indefinite"></animate></circle>
-<circle cx="1120" cy="160" r="15" fill="#0f1114" stroke="#d4b483" stroke-width="1.5"></circle><circle cx="1120" cy="160" r="8.2" fill="#d4b483" opacity="0.25"><animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.428;0.458;0.9;1" dur="9s" repeatCount="indefinite"></animate></circle>
-<circle cx="1380" cy="48" r="19" fill="#0f1114" stroke="#d4b483" stroke-width="1.5"></circle><circle cx="1380" cy="48" r="10.5" fill="#d4b483" opacity="0.25"><animate attributeName="opacity" values="0.25;0.25;1;1;0.25" keyTimes="0;0.527;0.557;0.9;1" dur="9s" repeatCount="indefinite"></animate></circle>
-</g>
-</svg>
-<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(15,17,20,0.9) 0%, rgba(15,17,20,0.5) 50%, rgba(15,17,20,0) 80%)"></div>
+<section style="position: relative; overflow: hidden; background: #121417; color: #ffffff; padding: clamp(56px, 6vw, 96px) 0 clamp(24px, 2.5vw, 40px)">
+
 <div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
 <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; color: #c9cbd0; margin-bottom: 32px; padding: 8px 0"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Venture Capital</a>
 <div class="vc-rise" style="font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #d4b483; font-weight: 500; margin-bottom: 16px">Stages We Invest</div>
-<h1 class="vc-rise vc-d1" style="font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; font-size: clamp(44px, 6vw, 108px); margin: 0 0 24px; max-width: 11em">From first cheque to scale</h1>
+<h1 class="vc-rise vc-d1" style="font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; font-size: clamp(40px, 5vw, 90px); margin: 0 0 20px; max-width: 14em">From first cheque to scale</h1>
 <p class="vc-rise vc-d2" style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.8; color: #d6d8dc; max-width: 34em; margin: 0">Every company moves through stages. Each one asks something different of founders and their capital. Here is how the journey unfolds, step by step.</p>
 </div>
 </section>
-<section style="background: #ffffff; padding: clamp(72px, 7vw, 120px) 0">
+<section id="stages" style="position: relative; overflow: hidden; background: #121417; color: #ffffff; padding: clamp(24px, 3vw, 48px) 0 clamp(72px, 7vw, 112px)">
 <div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
-<div style="max-width: 1200px">
-<div class="vc-rise" style="position: relative; padding-left: 96px; padding-bottom: clamp(56px, 5vw, 88px)">
-<svg aria-hidden="true" width="4" height="100%" preserveAspectRatio="none" viewBox="0 0 4 100" style="position: absolute; left: 28px; top: 64px; bottom: 0; height: calc(100% - 64px); overflow: visible"><line x1="2" y1="0" x2="2" y2="100" stroke="#e3dccd" stroke-width="2" vector-effect="non-scaling-stroke"></line><line x1="2" y1="0" x2="2" y2="100" stroke="#a8834f" stroke-width="2" vector-effect="non-scaling-stroke" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"><animate attributeName="stroke-dashoffset" values="100;0;0" keyTimes="0;0.4;1" dur="5s" begin="0.0s" repeatCount="indefinite"></animate></line></svg>
-<svg aria-hidden="true" width="58" height="58" viewBox="0 0 58 58" style="position: absolute; left: 1px; top: 4px; overflow: visible"><circle cx="29" cy="29" r="16" fill="#a8834f" fill-opacity="0.15"><animate attributeName="r" values="12;22;12" dur="3s" begin="-0.0s" repeatCount="indefinite"></animate></circle><circle cx="29" cy="29" r="10" fill="#ffffff" stroke="#a8834f" stroke-width="2"></circle><circle cx="29" cy="29" r="4.5" fill="#a8834f"></circle></svg>
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Step 1 · Idea stage</div>
-<h2 style="font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; font-size: clamp(32px, 3.2vw, 60px); margin: 0 0 14px">Pre-Seed</h2>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #121417; margin: 0 0 28px; max-width: 30em">Turn an idea into an initial business concept.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">Founders, prototypes, market research and early product development.</p></div>
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">Angel investors, startup accelerators and pre-seed funds.</p></div>
-<div style="flex: 1 1 220px; background: #faf7f1; border: 1px solid #ece6db; border-radius: 14px; padding: 18px 20px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 400; line-height: 1.7; color: #3a3d44; margin: 0">A founder sets out to build an AI-powered education app.</p></div>
-</div>
-</div>
-<div class="vc-rise" style="position: relative; padding-left: 96px; padding-bottom: clamp(56px, 5vw, 88px)">
-<svg aria-hidden="true" width="4" height="100%" preserveAspectRatio="none" viewBox="0 0 4 100" style="position: absolute; left: 28px; top: 64px; bottom: 0; height: calc(100% - 64px); overflow: visible"><line x1="2" y1="0" x2="2" y2="100" stroke="#e3dccd" stroke-width="2" vector-effect="non-scaling-stroke"></line><line x1="2" y1="0" x2="2" y2="100" stroke="#a8834f" stroke-width="2" vector-effect="non-scaling-stroke" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"><animate attributeName="stroke-dashoffset" values="100;0;0" keyTimes="0;0.4;1" dur="5s" begin="0.6s" repeatCount="indefinite"></animate></line></svg>
-<svg aria-hidden="true" width="58" height="58" viewBox="0 0 58 58" style="position: absolute; left: 1px; top: 4px; overflow: visible"><circle cx="29" cy="29" r="19" fill="#a8834f" fill-opacity="0.15"><animate attributeName="r" values="15;25;15" dur="3s" begin="-0.5s" repeatCount="indefinite"></animate></circle><circle cx="29" cy="29" r="13" fill="#ffffff" stroke="#a8834f" stroke-width="2"></circle><circle cx="29" cy="29" r="5.9" fill="#a8834f"></circle></svg>
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Step 2 · Product development</div>
-<h2 style="font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; font-size: clamp(32px, 3.2vw, 60px); margin: 0 0 14px">Seed</h2>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #121417; margin: 0 0 28px; max-width: 30em">Build the first product and validate customer demand.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">MVP development, hiring, customer acquisition and product testing.</p></div>
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">Seed-stage VC firms, angel investors and micro VCs.</p></div>
-<div style="flex: 1 1 220px; background: #faf7f1; border: 1px solid #ece6db; border-radius: 14px; padding: 18px 20px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 400; line-height: 1.7; color: #3a3d44; margin: 0">The app launches its first version and gains its first 1,000 users.</p></div>
-</div>
-</div>
-<div class="vc-rise" style="position: relative; padding-left: 96px; padding-bottom: clamp(56px, 5vw, 88px)">
-<svg aria-hidden="true" width="4" height="100%" preserveAspectRatio="none" viewBox="0 0 4 100" style="position: absolute; left: 28px; top: 64px; bottom: 0; height: calc(100% - 64px); overflow: visible"><line x1="2" y1="0" x2="2" y2="100" stroke="#e3dccd" stroke-width="2" vector-effect="non-scaling-stroke"></line><line x1="2" y1="0" x2="2" y2="100" stroke="#a8834f" stroke-width="2" vector-effect="non-scaling-stroke" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"><animate attributeName="stroke-dashoffset" values="100;0;0" keyTimes="0;0.4;1" dur="5s" begin="1.2s" repeatCount="indefinite"></animate></line></svg>
-<svg aria-hidden="true" width="58" height="58" viewBox="0 0 58 58" style="position: absolute; left: 1px; top: 4px; overflow: visible"><circle cx="29" cy="29" r="22" fill="#a8834f" fill-opacity="0.15"><animate attributeName="r" values="18;28;18" dur="3s" begin="-1.0s" repeatCount="indefinite"></animate></circle><circle cx="29" cy="29" r="16" fill="#ffffff" stroke="#a8834f" stroke-width="2"></circle><circle cx="29" cy="29" r="7.2" fill="#a8834f"></circle></svg>
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Step 3 · Business model validation</div>
-<h2 style="font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; font-size: clamp(32px, 3.2vw, 60px); margin: 0 0 14px">Series A</h2>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #121417; margin: 0 0 28px; max-width: 30em">Build a repeatable business model and grow revenue.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">Product improvement, sales teams, marketing and operational systems.</p></div>
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">Institutional VC firms.</p></div>
-<div style="flex: 1 1 220px; background: #faf7f1; border: 1px solid #ece6db; border-radius: 14px; padding: 18px 20px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 400; line-height: 1.7; color: #3a3d44; margin: 0">With paying customers in hand, the company raises funds to expand across India.</p></div>
-</div>
-</div>
-<div class="vc-rise" style="position: relative; padding-left: 96px; padding-bottom: clamp(56px, 5vw, 88px)">
-<svg aria-hidden="true" width="4" height="100%" preserveAspectRatio="none" viewBox="0 0 4 100" style="position: absolute; left: 28px; top: 64px; bottom: 0; height: calc(100% - 64px); overflow: visible"><line x1="2" y1="0" x2="2" y2="100" stroke="#e3dccd" stroke-width="2" vector-effect="non-scaling-stroke"></line><line x1="2" y1="0" x2="2" y2="100" stroke="#a8834f" stroke-width="2" vector-effect="non-scaling-stroke" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"><animate attributeName="stroke-dashoffset" values="100;0;0" keyTimes="0;0.4;1" dur="5s" begin="1.8s" repeatCount="indefinite"></animate></line></svg>
-<svg aria-hidden="true" width="58" height="58" viewBox="0 0 58 58" style="position: absolute; left: 1px; top: 4px; overflow: visible"><circle cx="29" cy="29" r="25" fill="#a8834f" fill-opacity="0.15"><animate attributeName="r" values="21;31;21" dur="3s" begin="-1.5s" repeatCount="indefinite"></animate></circle><circle cx="29" cy="29" r="19" fill="#ffffff" stroke="#a8834f" stroke-width="2"></circle><circle cx="29" cy="29" r="8.6" fill="#a8834f"></circle></svg>
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Step 4 · Scaling</div>
-<h2 style="font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; font-size: clamp(32px, 3.2vw, 60px); margin: 0 0 14px">Series B</h2>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #121417; margin: 0 0 28px; max-width: 30em">Expand a proven business rapidly.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">New markets, hiring at scale, technology infrastructure and acquisitions.</p></div>
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">Growth-oriented VC firms and larger institutional investors.</p></div>
-<div style="flex: 1 1 220px; background: #faf7f1; border: 1px solid #ece6db; border-radius: 14px; padding: 18px 20px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 400; line-height: 1.7; color: #3a3d44; margin: 0">The app expands to several countries and serves millions of learners.</p></div>
-</div>
-</div>
-<div class="vc-rise" style="position: relative; padding-left: 96px; padding-bottom: 0">
+<div class="st-chart" aria-hidden="true" style="margin: 0 0 clamp(24px, 2.5vw, 40px)">
+<svg viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: auto; display: block; overflow: visible">
+<defs><linearGradient id="stFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4b483" stop-opacity="0.22"></stop><stop offset="1" stop-color="#d4b483" stop-opacity="0"></stop></linearGradient></defs>
+<path d="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22 L1180,270 L20,270 Z" fill="url(#stFill)" opacity="0.6"></path>
+<path d="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22" fill="none" stroke="#2e3138" stroke-width="2"></path>
+<path d="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22" pathLength="100" fill="none" stroke="#d4b483" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="100" id="st-progress-path" style="stroke-dashoffset: 96; transition: stroke-dashoffset 0.9s cubic-bezier(.6,0,.2,1)"></path>
+<circle r="3" fill="#ffffff"><animateMotion dur="6s" repeatCount="indefinite" path="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22"></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="6s" repeatCount="indefinite"></animate></circle>
+<line x1="70" y1="254" x2="70" y2="270" stroke="#2e3138" stroke-dasharray="2 5"></line>
+<circle cx="70" cy="242" r="16" fill="#d4b483" fill-opacity="0.18" class="st-halo" data-i="0"><animate attributeName="r" values="12;26;12" dur="2.6s" repeatCount="indefinite"></animate></circle>
 
-<svg aria-hidden="true" width="58" height="58" viewBox="0 0 58 58" style="position: absolute; left: 1px; top: 4px; overflow: visible"><circle cx="29" cy="29" r="28" fill="#a8834f" fill-opacity="0.15"><animate attributeName="r" values="24;34;24" dur="3s" begin="-2.0s" repeatCount="indefinite"></animate></circle><circle cx="29" cy="29" r="22" fill="#ffffff" stroke="#a8834f" stroke-width="2"></circle><circle cx="29" cy="29" r="9.9" fill="#a8834f"></circle></svg>
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Step 5 · Expansion and maturity</div>
-<h2 style="font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; font-size: clamp(32px, 3.2vw, 60px); margin: 0 0 14px">Series C and beyond</h2>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #121417; margin: 0 0 28px; max-width: 30em">Fund major expansion and prepare for a public listing or acquisition.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">International growth, acquisitions, new business lines and market leadership.</p></div>
-<div style="flex: 1 1 220px; padding: 18px 0 0; border-top: 1px solid #ece6db"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #3a3d44; margin: 0">Late-stage VC firms, growth equity funds and institutional investors.</p></div>
-<div style="flex: 1 1 220px; background: #faf7f1; border: 1px solid #ece6db; border-radius: 14px; padding: 18px 20px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 400; line-height: 1.7; color: #3a3d44; margin: 0">The company acquires competitors and prepares for an IPO.</p></div>
+<text x="70" y="222" text-anchor="middle" font-family="Jost, sans-serif" font-size="13" font-weight="500" letter-spacing="0.6" fill="#ffffff" class="st-label" data-i="0">Pre-Seed</text>
+<line x1="335" y1="215" x2="335" y2="270" stroke="#2e3138" stroke-dasharray="2 5"></line>
+<circle cx="335" cy="200" r="19" fill="#d4b483" fill-opacity="0" class="st-halo" data-i="1"><animate attributeName="r" values="15;29;15" dur="2.6s" repeatCount="indefinite"></animate></circle>
+<circle cx="335" cy="200" r="9" fill="#121417" class="st-node" data-i="1" stroke="#d4b483" stroke-width="1.5" style="transition: fill 0.4s ease"></circle>
+<text x="335" y="177" text-anchor="middle" font-family="Jost, sans-serif" font-size="13" font-weight="500" letter-spacing="0.6" fill="#6f727a" class="st-label" data-i="1">Seed</text>
+<line x1="600" y1="170" x2="600" y2="270" stroke="#2e3138" stroke-dasharray="2 5"></line>
+<circle cx="600" cy="152" r="22" fill="#d4b483" fill-opacity="0" class="st-halo" data-i="2"><animate attributeName="r" values="18;32;18" dur="2.6s" repeatCount="indefinite"></animate></circle>
+<circle cx="600" cy="152" r="12" fill="#121417" class="st-node" data-i="2" stroke="#d4b483" stroke-width="1.5" style="transition: fill 0.4s ease"></circle>
+<text x="600" y="126" text-anchor="middle" font-family="Jost, sans-serif" font-size="13" font-weight="500" letter-spacing="0.6" fill="#6f727a" class="st-label" data-i="2">Series A</text>
+<line x1="865" y1="117" x2="865" y2="270" stroke="#2e3138" stroke-dasharray="2 5"></line>
+<circle cx="865" cy="96" r="25" fill="#d4b483" fill-opacity="0" class="st-halo" data-i="3"><animate attributeName="r" values="21;35;21" dur="2.6s" repeatCount="indefinite"></animate></circle>
+<circle cx="865" cy="96" r="15" fill="#121417" class="st-node" data-i="3" stroke="#d4b483" stroke-width="1.5" style="transition: fill 0.4s ease"></circle>
+<text x="865" y="67" text-anchor="middle" font-family="Jost, sans-serif" font-size="13" font-weight="500" letter-spacing="0.6" fill="#6f727a" class="st-label" data-i="3">Series B</text>
+<line x1="1130" y1="60" x2="1130" y2="270" stroke="#2e3138" stroke-dasharray="2 5"></line>
+<circle cx="1130" cy="35" r="29" fill="#d4b483" fill-opacity="0" class="st-halo" data-i="4"><animate attributeName="r" values="25;39;25" dur="2.6s" repeatCount="indefinite"></animate></circle>
+<circle cx="1130" cy="35" r="19" fill="#121417" class="st-node" data-i="4" stroke="#d4b483" stroke-width="1.5" style="transition: fill 0.4s ease"></circle>
+<text x="1130" y="2" text-anchor="middle" font-family="Jost, sans-serif" font-size="13" font-weight="500" letter-spacing="0.6" fill="#6f727a" class="st-label" data-i="4">Series C+</text><circle cx="70" cy="242" r="6" fill="#d4b483" class="st-node" data-i="0" stroke="#d4b483" stroke-width="1.5" style="transition: fill 0.4s ease"></circle>
+</svg>
 </div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: clamp(36px, 3.5vw, 56px)">
+<button type="button" class="st-tab" data-i="0" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: #1c1f24; border: 1px solid #d4b483; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">01</span>
+<span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Pre-Seed</span>
+<span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Idea stage</span>
+<span class="st-barwrap" data-i="0" style="display: contents"><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
+</button>
+<button type="button" class="st-tab" data-i="1" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">02</span>
+<span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Seed</span>
+<span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Product development</span>
+<span class="st-barwrap" data-i="1" style="display: contents" hidden><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
+</button>
+<button type="button" class="st-tab" data-i="2" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">03</span>
+<span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Series A</span>
+<span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Business model validation</span>
+<span class="st-barwrap" data-i="2" style="display: contents" hidden><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
+</button>
+<button type="button" class="st-tab" data-i="3" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">04</span>
+<span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Series B</span>
+<span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Scaling</span>
+<span class="st-barwrap" data-i="3" style="display: contents" hidden><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
+</button>
+<button type="button" class="st-tab" data-i="4" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">05</span>
+<span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Series C and beyond</span>
+<span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Expansion and maturity</span>
+<span class="st-barwrap" data-i="4" style="display: contents" hidden><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
+</button>
+</div>
+<div id="st-open">
+<div style="border-top: 1px solid #2a2d33; padding-top: clamp(32px, 3vw, 48px)">
+<span class="st-panelwrap" data-i="0" style="display: contents">
+<div class="st-panel">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 1 · Idea stage</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Pre-Seed</h3>
+<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Turn an idea into an initial business concept.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Founders, prototypes, market research and early product development.</p></div>
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Angel investors, startup accelerators and pre-seed funds.</p></div>
+<div style="flex: 1 1 240px; background: #1c1f24; border: 1px solid #3a3d44; border-radius: 14px; padding: 20px 22px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">A founder sets out to build an AI-powered education app.</p></div>
+</div>
+</div>
+</span>
+<span class="st-panelwrap" data-i="1" style="display: contents" hidden>
+<div class="st-panel">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 2 · Product development</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Seed</h3>
+<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Build the first product and validate customer demand.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">MVP development, hiring, customer acquisition and product testing.</p></div>
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Seed-stage VC firms, angel investors and micro VCs.</p></div>
+<div style="flex: 1 1 240px; background: #1c1f24; border: 1px solid #3a3d44; border-radius: 14px; padding: 20px 22px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">The app launches its first version and gains its first 1,000 users.</p></div>
+</div>
+</div>
+</span>
+<span class="st-panelwrap" data-i="2" style="display: contents" hidden>
+<div class="st-panel">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 3 · Business model validation</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Series A</h3>
+<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Build a repeatable business model and grow revenue.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Product improvement, sales teams, marketing and operational systems.</p></div>
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Institutional VC firms.</p></div>
+<div style="flex: 1 1 240px; background: #1c1f24; border: 1px solid #3a3d44; border-radius: 14px; padding: 20px 22px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">With paying customers in hand, the company raises funds to expand across India.</p></div>
+</div>
+</div>
+</span>
+<span class="st-panelwrap" data-i="3" style="display: contents" hidden>
+<div class="st-panel">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 4 · Scaling</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Series B</h3>
+<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Expand a proven business rapidly.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">New markets, hiring at scale, technology infrastructure and acquisitions.</p></div>
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Growth-oriented VC firms and larger institutional investors.</p></div>
+<div style="flex: 1 1 240px; background: #1c1f24; border: 1px solid #3a3d44; border-radius: 14px; padding: 20px 22px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">The app expands to several countries and serves millions of learners.</p></div>
+</div>
+</div>
+</span>
+<span class="st-panelwrap" data-i="4" style="display: contents" hidden>
+<div class="st-panel">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 5 · Expansion and maturity</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Series C and beyond</h3>
+<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Fund major expansion and prepare for a public listing or acquisition.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">International growth, acquisitions, new business lines and market leadership.</p></div>
+<div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Late-stage VC firms, growth equity funds and institutional investors.</p></div>
+<div style="flex: 1 1 240px; background: #1c1f24; border: 1px solid #3a3d44; border-radius: 14px; padding: 20px 22px"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 10px">Example</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">The company acquires competitors and prepares for an IPO.</p></div>
+</div>
+</div>
+</span>
 </div>
 </div>
 </div>
@@ -232,6 +288,37 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </div>
 </footer>
 </div>
-
+<script>
+(function () {
+  var a = 0, open = true, paused = false;
+  var prog = [4, 27, 50, 74, 100];
+  function q(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
+  function replay(el) { if (!el) return; el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; }
+  function render() {
+    q('.st-node').forEach(function (n) { n.setAttribute('fill', +n.dataset.i <= a ? '#d4b483' : '#121417'); });
+    q('.st-halo').forEach(function (n) { n.setAttribute('fill-opacity', +n.dataset.i === a ? '0.18' : '0'); });
+    q('.st-label').forEach(function (n) { n.setAttribute('fill', +n.dataset.i === a ? '#ffffff' : '#6f727a'); });
+    q('.st-tab').forEach(function (b) {
+      var on = +b.dataset.i === a;
+      b.style.background = on ? '#1c1f24' : 'transparent';
+      b.style.borderColor = on ? '#d4b483' : '#2e3138';
+      b.setAttribute('aria-expanded', on && open ? 'true' : 'false');
+    });
+    q('.st-barwrap').forEach(function (w) { var on = +w.dataset.i === a; w.hidden = !on; if (on) replay(w.querySelector('.st-progress')); });
+    var wrap = document.getElementById('st-open'); if (wrap) wrap.hidden = !open;
+    q('.st-panelwrap').forEach(function (w) { var on = open && +w.dataset.i === a; w.hidden = !on; if (on) replay(w.querySelector('.st-panel')); });
+    var p = document.getElementById('st-progress-path'); if (p) p.style.strokeDashoffset = String(100 - prog[a]);
+  }
+  q('.st-tab').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var i = +b.dataset.i;
+      if (open && i === a && paused) { open = false; } else { a = i; open = true; paused = true; }
+      render();
+    });
+  });
+  setInterval(function () { if (!paused) { a = (a + 1) % 5; render(); } }, 6000);
+  render();
+})();
+</script>
 </body>
 </html>
