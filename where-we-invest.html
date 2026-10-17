@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Where We Invest | KP Sanghvi Group</title>
+<meta name="description" content="KP Sanghvi Venture Capital backs founders across Luxury Fashion, Robotics and Automation, HealthTech, FinTech and TravelTech.">
+<link rel="icon" href="assets/kps-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff}
+a{color:#121417}a:hover{color:#8a6a3e}
+@keyframes vcDraw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes vcRise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@keyframes vcFade{from{opacity:0}to{opacity:1}}
+@keyframes vcSpin{to{transform:rotate(360deg)}}
+@keyframes vcSpinBack{to{transform:rotate(-360deg)}}
+@keyframes vcFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes vcFloatAlt{0%,100%{transform:translate(0,0)}50%{transform:translate(12px,10px)}}
+@keyframes vcTravel{0%{left:0;opacity:0}6%{opacity:1}94%{opacity:1}100%{left:100%;opacity:0}}
+@keyframes vcPulse{0%,100%{box-shadow:0 0 0 0 rgba(168,131,79,0)}50%{box-shadow:0 0 0 12px rgba(168,131,79,.16)}}
+@keyframes vcBreathe{0%,100%{transform:scale(1);opacity:.5}50%{transform:scale(1.08);opacity:.9}}
+@keyframes bnRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.bn-rise{animation:bnRise 1s cubic-bezier(.2,.7,.2,1) both}
+.bn-d1{animation-delay:.15s}.bn-d2{animation-delay:.3s}
+.vc-rise{animation:vcRise .9s cubic-bezier(.2,.7,.2,1) both}
+.vc-d1{animation-delay:.1s}.vc-d2{animation-delay:.25s}.vc-d3{animation-delay:.4s}.vc-d4{animation-delay:.55s}.vc-d5{animation-delay:.7s}
+.vc-spin{animation:vcSpin 40s linear infinite}
+.vc-spin-back{animation:vcSpinBack 28s linear infinite}
+.vc-float{animation:vcFloat 7s ease-in-out infinite}
+.vc-float-alt{animation:vcFloatAlt 9s ease-in-out infinite}
+.vc-breathe{animation:vcBreathe 8s ease-in-out infinite}
+.vc-orbit-a{animation:vcSpin 28s linear infinite}
+.vc-orbit-b{animation:vcSpinBack 22s linear infinite}
+.vc-orbit-c{animation:vcSpin 16s linear infinite}
+.vc-orbit-a .vc-chip{animation:vcSpinBack 28s linear infinite}
+.vc-orbit-b .vc-chip{animation:vcSpin 22s linear infinite}
+.vc-orbit-c .vc-chip{animation:vcSpinBack 16s linear infinite}
+.vc-p1{animation-duration:14s}
+.vc-p2{animation-duration:10s}
+.vc-p3{animation-duration:7s}
+.vc-hero-rings .vc-spin{animation-duration:24s}
+.vc-hero-rings .vc-spin-back{animation-duration:16s}
+.vc-btn{transition:transform .25s ease,background .25s ease,color .25s ease}
+.vc-btn:hover{transform:translateY(-2px)}
+.vc-btn-dark:hover{background:#8a6a3e;color:#ffffff}
+.vc-btn-gold:hover{background:#ffffff;color:#121417}
+.vc-stat{transition:background .3s ease}
+.vc-stat:hover{background:#faf7f1}
+.vc-rail{transform-origin:left center;animation:vcDraw 1.6s cubic-bezier(.6,0,.2,1) .4s both}
+.vc-spark{position:absolute;top:-3px;width:7px;height:7px;margin-left:-3px;border-radius:50%;background:#a8834f;animation:vcTravel 6s linear 2s infinite both}
+.vc-node{animation:vcRise .9s ease both}
+.vc-nodes .vc-node:nth-child(1){animation-delay:.5s}
+.vc-nodes .vc-node:nth-child(2){animation-delay:.7s}
+.vc-nodes .vc-node:nth-child(3){animation-delay:.9s}
+.vc-nodes .vc-node:nth-child(4){animation-delay:1.1s}
+.vc-nodes .vc-node:nth-child(5){animation-delay:1.3s}
+.vc-orb{transition:transform .35s ease,background .35s ease;animation:vcPulse 6s ease-in-out infinite}
+.vc-nodes .vc-node:nth-child(1) .vc-orb{animation-delay:-1s}
+.vc-nodes .vc-node:nth-child(2) .vc-orb{animation-delay:.5s}
+.vc-nodes .vc-node:nth-child(3) .vc-orb{animation-delay:2s}
+.vc-nodes .vc-node:nth-child(4) .vc-orb{animation-delay:3.5s}
+.vc-nodes .vc-node:nth-child(5) .vc-orb{animation-delay:5s}
+.vc-node:hover .vc-orb{transform:translateY(-6px);background:#ffffff}
+@media (max-width: 1080px){.vc-rail,.vc-track{display:none}}
+@keyframes stFill{from{width:0}to{width:100%}}
+.st-progress{animation:stFill 5s linear both}
+@keyframes stIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.st-panel{animation:stIn .6s cubic-bezier(.2,.7,.2,1) both}
+@media (max-width: 760px){.st-chart{display:none}}
+.vc-dash{stroke-dasharray:240;stroke-dashoffset:240;animation:vcDash 1.4s cubic-bezier(.6,0,.2,1) both}
+.vc-dash-long{stroke-dasharray:4 6;stroke-dashoffset:0;animation:vcFade 1.6s ease .2s both}
+@keyframes vcDash{to{stroke-dashoffset:0}}
+.vc-stage{transform-origin:center center;transform:scale(.82)}
+@media (max-width: 560px){.vc-stage{transform:scale(.62)}.vc-hero-rings{height:290px!important}}
+@media (min-width: 1600px){.vc-stage{transform:scale(1)}.vc-hero-rings{height:460px!important}}
+@media (min-width: 2000px){.vc-stage{transform:scale(1.2)}.vc-hero-rings{height:560px!important}}
+@media (prefers-reduced-motion: reduce){.vc-orbit-a,.vc-orbit-b,.vc-orbit-c,.vc-chip,.vc-rise,.vc-spin,.vc-spin-back,.vc-float,.vc-float-alt,.vc-breathe,.vc-rail,.vc-spark,.vc-node,.vc-orb,.vc-dash{animation:none}.vc-dash{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden">
+<header style="position: relative; z-index: 2; padding: 22px 0; border-bottom: 1px solid #ece6db">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
+<a href="https://kpsanghvi.com/" style="display: flex; align-items: center; text-decoration: none">
+<img src="assets/kps-logo.png" alt="KP Sanghvi, since 1965" style="height: 56px; width: auto; display: block">
+</a>
+<nav style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
+<a href="index.html" style="font-size: 15px; font-weight: 400; text-decoration: none; padding: 12px 0">Venture Capital</a>
+<a href="where-we-invest.html" aria-current="page" style="font-size: 15px; font-weight: 500; text-decoration: none; padding: 12px 0 10px; border-bottom: 2px solid #a8834f">Where We Invest</a>
+<a class="vc-btn vc-btn-dark" href="https://kpsanghvi.com/reach-out/" style="font-size: 14px; font-weight: 500; text-decoration: none; background: #121417; color: #ffffff; padding: 12px 24px; border-radius: 999px">Pitch to Us</a>
+</nav>
+</div>
+</header>
+<section style="position: relative; overflow: hidden; background: #faf7f1; padding: clamp(64px, 7vw, 110px) 0 clamp(56px, 6vw, 96px)">
+<svg aria-hidden="true" viewBox="0 0 600 600" style="position: absolute; right: -120px; top: -140px; width: clamp(360px, 40vw, 720px); height: auto; overflow: visible">
+<circle cx="300" cy="300" r="280" fill="none" stroke="#e3dccd" stroke-dasharray="5 7"></circle>
+<circle cx="300" cy="300" r="190" fill="none" stroke="#ece6db"></circle>
+<circle cx="300" cy="300" r="100" fill="none" stroke="#e3dccd" stroke-dasharray="3 5"></circle>
+<g><circle r="9" fill="#a8834f"></circle><animateMotion dur="22s" repeatCount="indefinite" path="M300,20 a280,280 0 1,1 0,560 a280,280 0 1,1 0,-560"></animateMotion></g>
+<g><circle r="7" fill="#121417"></circle><animateMotion dur="14s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" path="M300,110 a190,190 0 1,1 0,380 a190,190 0 1,1 0,-380"></animateMotion></g>
+<g><circle r="5" fill="#a8834f"></circle><animateMotion dur="8s" repeatCount="indefinite" path="M300,200 a100,100 0 1,1 0,200 a100,100 0 1,1 0,-200"></animateMotion></g>
+</svg>
+<div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
+<a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; color: #5a5d64; margin-bottom: 32px; padding: 8px 0"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Venture Capital</a>
+<div class="vc-rise" style="font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #8a6a3e; font-weight: 500; margin-bottom: 16px">Investment Focus</div>
+<h1 class="vc-rise vc-d1" style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(40px, 4.6vw, 84px); margin: 0 0 24px">Where We Invest</h1>
+<p class="vc-rise vc-d2" style="font-size: clamp(16px, 1.15vw, 21px); font-weight: 300; line-height: 1.8; color: #4a4d55; max-width: 34em; margin: 0 0 36px">We back founders in five sectors where deep and durable change is taking shape.</p>
+<div class="vc-rise vc-d3" style="display: flex; flex-wrap: wrap; gap: 10px"><a href="#sector-1" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: 1px solid #e3dccd; background: #ffffff; border-radius: 999px; padding: 10px 18px 10px 12px; font-size: 15px; font-weight: 500"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"></path><path d="M2 9h20"></path><path d="M12 21 8 9l4-6 4 6-4 12"></path></svg>Luxury Fashion</a><a href="#sector-2" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: 1px solid #e3dccd; background: #ffffff; border-radius: 999px; padding: 10px 18px 10px 12px; font-size: 15px; font-weight: 500"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="2"></rect><path d="M12 4v4"></path><circle cx="12" cy="3" r="1"></circle><circle cx="9.5" cy="12.5" r="1"></circle><circle cx="14.5" cy="12.5" r="1"></circle><path d="M9.5 16h5"></path><path d="M3 12v3"></path><path d="M21 12v3"></path></svg>Robotics &amp; Automation</a><a href="#sector-3" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: 1px solid #e3dccd; background: #ffffff; border-radius: 999px; padding: 10px 18px 10px 12px; font-size: 15px; font-weight: 500"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"></path><path d="M6 12h3l1.5-2.5 3 5 1.5-2.5h3"></path></svg>HealthTech</a><a href="#sector-4" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: 1px solid #e3dccd; background: #ffffff; border-radius: 999px; padding: 10px 18px 10px 12px; font-size: 15px; font-weight: 500"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path><path d="M6 15h4"></path><path d="M15 15h3"></path></svg>FinTech</a><a href="#sector-5" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; border: 1px solid #e3dccd; background: #ffffff; border-radius: 999px; padding: 10px 18px 10px 12px; font-size: 15px; font-weight: 500"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path></svg>TravelTech</a></div>
+</div>
+</section>
+<section id="sector-1" style="background: #ffffff; border-top: 1px solid #ece6db; padding: clamp(64px, 6vw, 104px) 0">
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; gap: 40px clamp(48px, 6vw, 120px)">
+<div aria-hidden="true" style="flex: 0 1 360px; display: flex; justify-content: center">
+<svg viewBox="0 0 320 320" style="width: min(100%, 320px); height: auto; overflow: visible">
+<circle cx="160" cy="160" r="150" fill="none" stroke="#e3dccd" stroke-dasharray="4 6"></circle>
+<circle cx="160" cy="160" r="104" fill="#faf7f1" stroke="#a8834f" stroke-opacity="0.6"><animate attributeName="r" values="100;110;100" dur="5s" repeatCount="indefinite"></animate></circle>
+<g><circle r="7" fill="#a8834f"></circle><animateMotion dur="10s" repeatCount="indefinite" path="M160,10 a150,150 0 1,1 0,300 a150,150 0 1,1 0,-300"></animateMotion></g>
+<g transform="translate(112 112) scale(4)" fill="none" stroke="#a8834f" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"></path><path d="M2 9h20"></path><path d="M12 21 8 9l4-6 4 6-4 12"></path></g>
+</svg>
+</div>
+<div class="vc-rise" style="flex: 1 1 420px; min-width: 0">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #8a6a3e; margin-bottom: 14px">01 / 05</div>
+<h2 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 56px); margin: 0 0 20px">Luxury Fashion</h2>
+<p style="font-size: clamp(16px, 1.15vw, 21px); font-weight: 300; line-height: 1.8; color: #4a4d55; margin: 0 0 28px; max-width: 34em">Luxury is moving from heritage alone to heritage with relevance. We back brands that pair real craft with a clear identity and a direct bond with their customers. Our roots in diamonds and jewellery give us an insider’s view of this world.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #5a5d64; margin-bottom: 4px">What we look for</div>
+<ul style="list-style: none; padding: 0; margin: 0; max-width: 30em; font-size: clamp(15px, 1.05vw, 19px)"><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>A distinctive design language</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Strong craft and supply chains</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Brands built for global appeal</li></ul>
+</div>
+</div>
+</section>
+<section id="sector-2" style="background: #faf7f1; border-top: 1px solid #ece6db; padding: clamp(64px, 6vw, 104px) 0">
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; flex-direction: row-reverse; align-items: center; gap: 40px clamp(48px, 6vw, 120px)">
+<div aria-hidden="true" style="flex: 0 1 360px; display: flex; justify-content: center">
+<svg viewBox="0 0 320 320" style="width: min(100%, 320px); height: auto; overflow: visible">
+<circle cx="160" cy="160" r="150" fill="none" stroke="#e3dccd" stroke-dasharray="4 6"></circle>
+<circle cx="160" cy="160" r="104" fill="#ffffff" stroke="#a8834f" stroke-opacity="0.6"><animate attributeName="r" values="100;110;100" dur="5s" repeatCount="indefinite"></animate></circle>
+<g><circle r="7" fill="#a8834f"></circle><animateMotion dur="12s" repeatCount="indefinite" path="M160,10 a150,150 0 1,1 0,300 a150,150 0 1,1 0,-300"></animateMotion></g>
+<g transform="translate(112 112) scale(4)" fill="none" stroke="#a8834f" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="8" width="14" height="11" rx="2"></rect><path d="M12 4v4"></path><circle cx="12" cy="3" r="1"></circle><circle cx="9.5" cy="12.5" r="1"></circle><circle cx="14.5" cy="12.5" r="1"></circle><path d="M9.5 16h5"></path><path d="M3 12v3"></path><path d="M21 12v3"></path></g>
+</svg>
+</div>
+<div class="vc-rise" style="flex: 1 1 420px; min-width: 0">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #8a6a3e; margin-bottom: 14px">02 / 05</div>
+<h2 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 56px); margin: 0 0 20px">Robotics &amp; Automation</h2>
+<p style="font-size: clamp(16px, 1.15vw, 21px); font-weight: 300; line-height: 1.8; color: #4a4d55; margin: 0 0 28px; max-width: 34em">Industry is being rebuilt around machines that see, move and decide. We back teams turning that capability into safer, faster and more precise operations.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #5a5d64; margin-bottom: 4px">What we look for</div>
+<ul style="list-style: none; padding: 0; margin: 0; max-width: 30em; font-size: clamp(15px, 1.05vw, 19px)"><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Deep technical teams</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Clear industrial use cases</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Hardware with a path to scale</li></ul>
+</div>
+</div>
+</section>
+<section id="sector-3" style="background: #ffffff; border-top: 1px solid #ece6db; padding: clamp(64px, 6vw, 104px) 0">
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; gap: 40px clamp(48px, 6vw, 120px)">
+<div aria-hidden="true" style="flex: 0 1 360px; display: flex; justify-content: center">
+<svg viewBox="0 0 320 320" style="width: min(100%, 320px); height: auto; overflow: visible">
+<circle cx="160" cy="160" r="150" fill="none" stroke="#e3dccd" stroke-dasharray="4 6"></circle>
+<circle cx="160" cy="160" r="104" fill="#faf7f1" stroke="#a8834f" stroke-opacity="0.6"><animate attributeName="r" values="100;110;100" dur="5s" repeatCount="indefinite"></animate></circle>
+<g><circle r="7" fill="#a8834f"></circle><animateMotion dur="14s" repeatCount="indefinite" path="M160,10 a150,150 0 1,1 0,300 a150,150 0 1,1 0,-300"></animateMotion></g>
+<g transform="translate(112 112) scale(4)" fill="none" stroke="#a8834f" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"></path><path d="M6 12h3l1.5-2.5 3 5 1.5-2.5h3"></path></g>
+</svg>
+</div>
+<div class="vc-rise" style="flex: 1 1 420px; min-width: 0">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #8a6a3e; margin-bottom: 14px">03 / 05</div>
+<h2 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 56px); margin: 0 0 20px">HealthTech</h2>
+<p style="font-size: clamp(16px, 1.15vw, 21px); font-weight: 300; line-height: 1.8; color: #4a4d55; margin: 0 0 28px; max-width: 34em">Care is shifting closer to the patient and earlier in the journey. We back solutions that widen access, improve outcomes and lower the cost of good care.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #5a5d64; margin-bottom: 4px">What we look for</div>
+<ul style="list-style: none; padding: 0; margin: 0; max-width: 30em; font-size: clamp(15px, 1.05vw, 19px)"><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Clinical credibility</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Measurable patient outcomes</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Models that reach underserved markets</li></ul>
+</div>
+</div>
+</section>
+<section id="sector-4" style="background: #faf7f1; border-top: 1px solid #ece6db; padding: clamp(64px, 6vw, 104px) 0">
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; flex-direction: row-reverse; align-items: center; gap: 40px clamp(48px, 6vw, 120px)">
+<div aria-hidden="true" style="flex: 0 1 360px; display: flex; justify-content: center">
+<svg viewBox="0 0 320 320" style="width: min(100%, 320px); height: auto; overflow: visible">
+<circle cx="160" cy="160" r="150" fill="none" stroke="#e3dccd" stroke-dasharray="4 6"></circle>
+<circle cx="160" cy="160" r="104" fill="#ffffff" stroke="#a8834f" stroke-opacity="0.6"><animate attributeName="r" values="100;110;100" dur="5s" repeatCount="indefinite"></animate></circle>
+<g><circle r="7" fill="#a8834f"></circle><animateMotion dur="16s" repeatCount="indefinite" path="M160,10 a150,150 0 1,1 0,300 a150,150 0 1,1 0,-300"></animateMotion></g>
+<g transform="translate(112 112) scale(4)" fill="none" stroke="#a8834f" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"></rect><path d="M2 10h20"></path><path d="M6 15h4"></path><path d="M15 15h3"></path></g>
+</svg>
+</div>
+<div class="vc-rise" style="flex: 1 1 420px; min-width: 0">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #8a6a3e; margin-bottom: 14px">04 / 05</div>
+<h2 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 56px); margin: 0 0 20px">FinTech</h2>
+<p style="font-size: clamp(16px, 1.15vw, 21px); font-weight: 300; line-height: 1.8; color: #4a4d55; margin: 0 0 28px; max-width: 34em">Money is becoming simpler, faster and more open. We back platforms that bring transparency and fairness to how people and businesses save, pay and borrow.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #5a5d64; margin-bottom: 4px">What we look for</div>
+<ul style="list-style: none; padding: 0; margin: 0; max-width: 30em; font-size: clamp(15px, 1.05vw, 19px)"><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Trust and regulatory readiness</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>A real customer problem solved</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Infrastructure others can build on</li></ul>
+</div>
+</div>
+</section>
+<section id="sector-5" style="background: #ffffff; border-top: 1px solid #ece6db; padding: clamp(64px, 6vw, 104px) 0">
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; flex-direction: row; align-items: center; gap: 40px clamp(48px, 6vw, 120px)">
+<div aria-hidden="true" style="flex: 0 1 360px; display: flex; justify-content: center">
+<svg viewBox="0 0 320 320" style="width: min(100%, 320px); height: auto; overflow: visible">
+<circle cx="160" cy="160" r="150" fill="none" stroke="#e3dccd" stroke-dasharray="4 6"></circle>
+<circle cx="160" cy="160" r="104" fill="#faf7f1" stroke="#a8834f" stroke-opacity="0.6"><animate attributeName="r" values="100;110;100" dur="5s" repeatCount="indefinite"></animate></circle>
+<g><circle r="7" fill="#a8834f"></circle><animateMotion dur="18s" repeatCount="indefinite" path="M160,10 a150,150 0 1,1 0,300 a150,150 0 1,1 0,-300"></animateMotion></g>
+<g transform="translate(112 112) scale(4)" fill="none" stroke="#a8834f" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path></g>
+</svg>
+</div>
+<div class="vc-rise" style="flex: 1 1 420px; min-width: 0">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; color: #8a6a3e; margin-bottom: 14px">05 / 05</div>
+<h2 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 56px); margin: 0 0 20px">TravelTech</h2>
+<p style="font-size: clamp(16px, 1.15vw, 21px); font-weight: 300; line-height: 1.8; color: #4a4d55; margin: 0 0 28px; max-width: 34em">The way people plan and experience the world is being redesigned. We back products that make travel more personal, seamless and rewarding.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #5a5d64; margin-bottom: 4px">What we look for</div>
+<ul style="list-style: none; padding: 0; margin: 0; max-width: 30em; font-size: clamp(15px, 1.05vw, 19px)"><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Clear gains for the traveller</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Strong partner networks</li><li style="display: flex; gap: 12px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #ece6db"><span style="width: 6px; height: 6px; border-radius: 50%; background: #a8834f; flex: none; transform: translateY(-2px)"></span>Businesses built across borders</li></ul>
+</div>
+</div>
+</section>
+<section style="position: relative; overflow: hidden; background: #121417; color: #ffffff; text-align: center; padding: clamp(80px, 9vw, 130px) 0">
+<svg aria-hidden="true" viewBox="0 0 720 720" style="position: absolute; top: 50%; left: 50%; width: 720px; height: 720px; margin: -360px 0 0 -360px; overflow: visible">
+<circle cx="360" cy="360" r="340" fill="none" stroke="#2e3138" stroke-dasharray="5 7"></circle>
+<circle cx="360" cy="360" r="230" fill="none" stroke="#24272d"></circle>
+<g><circle r="6" fill="#d4b483"></circle><animateMotion dur="24s" repeatCount="indefinite" path="M360,20 a340,340 0 1,1 0,680 a340,340 0 1,1 0,-680"></animateMotion></g>
+<g><circle r="5" fill="#ffffff" opacity="0.6"></circle><animateMotion dur="16s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear" path="M360,130 a230,230 0 1,1 0,460 a230,230 0 1,1 0,-460"></animateMotion></g>
+</svg>
+<div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
+<h2 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; font-size: clamp(32px, 4.4vw, 60px); max-width: 16em; margin: 0 auto 40px">Building in one of these sectors?</h2>
+<a class="vc-btn vc-btn-gold" href="https://kpsanghvi.com/reach-out/" style="display: inline-block; font-size: 15px; font-weight: 500; text-decoration: none; background: #a8834f; color: #121417; padding: 16px 36px; border-radius: 999px">Pitch to Us</a>
+</div>
+</section>
+<footer style="background: #faf7f1; color: #3a3d44; font-size: 15px; border-top: 1px solid #ece6db">
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 64px 24px 40px; display: flex; flex-wrap: wrap; gap: 48px 64px; justify-content: space-between">
+<div style="flex: 1 1 240px">
+<a href="https://kpsanghvi.com/" style="display: inline-block"><img src="assets/kps-logo.png" alt="KP Sanghvi, since 1965" style="height: 84px; width: auto; display: block"></a>
+<div style="display: flex; gap: 12px; margin-top: 28px">
+<a href="https://www.instagram.com/kpsanghvi_?igsh=MWczdHB6MHg2emNjNQ%3D%3D" aria-label="Instagram" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #d9cfbd; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121417" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.6"></circle></svg></a>
+<a href="https://www.linkedin.com/company/kp-sanghvi/" aria-label="LinkedIn" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #d9cfbd; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121417" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"></rect><path d="M8 10v7"></path><path d="M8 7v.01"></path><path d="M12 17v-4a2 2 0 0 1 4 0v4"></path><path d="M12 10v7"></path></svg></a>
+<a href="https://www.youtube.com/@kpsanghvi1965?si=OfOrdEI4DCwMxmw7" aria-label="YouTube" style="width: 44px; height: 44px; border-radius: 50%; border: 1px solid #d9cfbd; display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#121417" stroke-width="1.6" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="4"></rect><path d="M10 9.5v5l4.5-2.5z"></path></svg></a>
+</div>
+</div>
+<div style="flex: 0 1 200px">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 18px">Quick Links</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<a href="https://kpsanghvi.com/" style="text-decoration: none; padding: 4px 0">Home</a>
+<a href="https://kpsanghvi.com/about-us/" style="text-decoration: none; padding: 4px 0">About Us</a>
+<a href="https://kpsanghvi.com/sustainability/" style="text-decoration: none; padding: 4px 0">Sustainability</a>
+<a href="https://kpsanghvi.com/news-events/" style="text-decoration: none; padding: 4px 0">News &amp; Events</a>
+<a href="https://kpsanghvi.com/reach-out/" style="text-decoration: none; padding: 4px 0">Contact Us</a>
+</div>
+</div>
+<div style="flex: 0 1 240px">
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 18px">Contact Us</div>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<a href="mailto:info@kpsanghvi.com" style="text-decoration: none; padding: 4px 0">info@kpsanghvi.com</a>
+<a href="tel:+912261233333" style="text-decoration: none; padding: 4px 0">+91-22-6123 3333</a>
+</div>
+</div>
+</div>
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px 36px">
+<p style="font-size: 13px; color: #5a5d64; margin: 0; max-width: 900px; line-height: 1.7">KP Sanghvi group companies have adopted RJC policies and procedures. Policies and due diligence documentation are available on request at <a href="mailto:legal@kpsanghvi.com">legal@kpsanghvi.com</a>. Annual supply chain due diligence: the group companies are classified as a small business under OECD guidelines.</p>
+</div>
+<div style="border-top: 1px solid #ece6db">
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 22px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px; color: #5a5d64">
+<span>© 2025 KP Sanghvi. All rights reserved</span>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<a href="https://kpsanghvi.com/wp-content/uploads/2026/03/terms_and_conditions.pdf" style="text-decoration: none">Terms &amp; Conditions</a>
+<a href="https://kpsanghvi.com/wp-content/uploads/2026/03/terms_and_conditions.pdf" style="text-decoration: none">Privacy Policy</a>
+<a href="https://kpsanghvi.com/sitemaps.xml" style="text-decoration: none">Sitemap</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+
+</body>
+</html>
