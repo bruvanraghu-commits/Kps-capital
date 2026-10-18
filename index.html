@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 <style>
 html{scroll-padding-top:124px}
+@media (max-height: 820px) and (min-width: 900px){#why{padding-top:18px !important;padding-bottom:18px !important}#why p{font-size:15px !important;line-height:1.6 !important}#why h2{font-size:clamp(30px,3vw,44px) !important}}
 body{margin:0;background:#ffffff}
 a{color:#121417}a:hover{color:#8a6a3e}
 @keyframes vcDraw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
@@ -88,7 +89,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </style>
 </head>
 <body data-hero="flow">
-<div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden">
+<div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: clip">
 
 <header style="position: sticky; top: 0; z-index: 50; background: #ffffff; padding: 22px 0; border-bottom: 1px solid #ece6db">
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
@@ -104,7 +105,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </header>
 
 <div class="hero-opt hero-seed">
-<section style="position: relative; overflow: hidden; padding: clamp(40px, 4.5vw, 72px) 0; min-height: min(calc(100vh - 124px), 880px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; scroll-snap-align: start" data-fp="1">
+<section style="position: relative; overflow: hidden; padding: clamp(40px, 4.5vw, 72px) 0; min-height: calc(100vh - 124px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; scroll-snap-align: start" data-fp="1">
 <div aria-hidden="true" class="vc-breathe" style="position: absolute; top: -10vw; right: -8vw; width: clamp(360px, 38vw, 900px); height: clamp(360px, 38vw, 900px); border-radius: 50%; background: #f6efe2"></div>
 <div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px 56px">
 <div style="flex: 1.2 1 480px; min-width: 0">
@@ -149,7 +150,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </section>
 </div>
 <div class="hero-opt hero-globe">
-<section style="position: relative; overflow: hidden; background: #0f1114; height: min(calc(100vh - 124px), 880px); min-height: 520px; scroll-snap-align: start" data-fp="1">
+<section style="position: relative; overflow: hidden; background: #0f1114; height: calc(100vh - 124px); min-height: 520px; scroll-snap-align: start" data-fp="1">
 <svg aria-hidden="true" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block">
 <defs><radialGradient id="gGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0.7" stop-color="#d4b483" stop-opacity="0.18"></stop><stop offset="1" stop-color="#d4b483" stop-opacity="0"></stop></radialGradient><radialGradient id="gBody" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#23262c"></stop><stop offset="1" stop-color="#0f1114"></stop></radialGradient><clipPath id="gClip"><circle cx="1040" cy="560" r="400"></circle></clipPath></defs>
 <circle cx="897" cy="564" r="0.8" fill="#ffffff" opacity="0.4"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="6.4s" begin="-4.7s" repeatCount="indefinite"></animate></circle>
@@ -267,13 +268,13 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 <div class="bn-rise" style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #d4b483; margin-bottom: 24px">Venture Capital</div>
 <h1 class="bn-rise bn-d1" style="font-weight: 500; line-height: 1.12; letter-spacing: -0.01em; font-size: clamp(44px, 5.4vw, 104px); color: #ffffff; margin: 0 0 28px; max-width: 14em">Backing Founders.<br>Building Legacy.</h1>
 <p class="bn-rise bn-d2" style="font-size: clamp(17px, 1.3vw, 24px); font-weight: 300; line-height: 1.75; color: #c9cbd0; max-width: 34em; margin: 0">For six decades, KP Sanghvi has built businesses meant to last. Our venture platform brings that same patience to the founders shaping what comes next.</p>
-<p class="bn-rise bn-d2" style="font-size: clamp(15px, 1.05vw, 19px); font-weight: 300; line-height: 1.75; color: #a2a5ab; max-width: 36em; margin: 16px 0 0">We back teams in Luxury Fashion, Robotics and Automation, HealthTech, FinTech and TravelTech, with capital that stays for the long run.</p>
+<p class="bn-rise bn-d2" style="font-size: clamp(17px, 1.3vw, 24px); font-weight: 300; line-height: 1.75; color: #c9cbd0; max-width: 34em; margin: 16px 0 0">We partner early, often before the product exists, and stay through every stage. Founders get capital, counsel and a network that spans industries and continents.</p>
 <div class="bn-rise bn-d2" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 32px; font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483"><span>India</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #5a5d64"></span><span>UAE</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #5a5d64"></span><span>United States</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #5a5d64"></span><span>Hong Kong</span></div>
 </div>
 </section>
 </div>
 <div class="hero-opt hero-flow">
-<section style="position: relative; overflow: hidden; background: #faf7f1; height: min(calc(100vh - 124px), 880px); min-height: 520px; scroll-snap-align: start" data-fp="1">
+<section style="position: relative; overflow: hidden; background: #faf7f1; height: calc(100vh - 124px); min-height: 520px; scroll-snap-align: start" data-fp="1">
 <svg aria-hidden="true" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block">
 <path d="M-60,125.9 L-20,141.6 L20,158.4 L60,174.1 L100,186.6 L140,194.7 L180,197.7 L220,195.9 L260,190.5 L300,183.1 L340,175.4 L380,169.0 L420,164.9 L460,163.1 L500,163.1 L540,163.8 L580,163.6 L620,161.2 L660,155.6 L700,146.6 L740,134.9 L780,121.8 L820,109.3 L860,99.2 L900,93.4 L940,92.9 L980,98.1 L1020,108.2 L1060,121.8 L1100,136.9 L1140,151.3 L1180,163.3 L1220,171.7 L1260,176.0 L1300,176.9 L1340,175.4 L1380,173.0 L1420,171.2 L1460,171.2 L1500,173.4" fill="none" stroke="#c9b48f" stroke-opacity="0.22" stroke-width="1"><animate attributeName="d" values="M-60,125.9 L-20,141.6 L20,158.4 L60,174.1 L100,186.6 L140,194.7 L180,197.7 L220,195.9 L260,190.5 L300,183.1 L340,175.4 L380,169.0 L420,164.9 L460,163.1 L500,163.1 L540,163.8 L580,163.6 L620,161.2 L660,155.6 L700,146.6 L740,134.9 L780,121.8 L820,109.3 L860,99.2 L900,93.4 L940,92.9 L980,98.1 L1020,108.2 L1060,121.8 L1100,136.9 L1140,151.3 L1180,163.3 L1220,171.7 L1260,176.0 L1300,176.9 L1340,175.4 L1380,173.0 L1420,171.2 L1460,171.2 L1500,173.4;M-60,212.9 L-20,208.5 L20,199.4 L60,187.5 L100,174.9 L140,163.8 L180,155.4 L220,150.4 L260,148.3 L300,148.1 L340,148.0 L380,146.5 L420,142.2 L460,134.8 L500,124.6 L540,112.8 L580,101.5 L620,92.7 L660,88.5 L700,90.2 L740,98.0 L780,111.4 L820,128.7 L860,147.6 L900,165.6 L940,180.4 L980,190.5 L1020,195.2 L1060,195.0 L1100,191.1 L1140,185.3 L1180,179.5 L1220,175.2 L1260,173.5 L1300,174.1 L1340,176.3 L1380,178.6 L1420,179.2 L1460,176.4 L1500,169.3;M-60,146.5 L-20,139.9 L20,136.4 L60,135.4 L100,136.0 L140,136.7 L180,136.3 L220,133.9 L260,129.5 L300,123.5 L340,116.9 L380,111.4 L420,108.5 L460,109.4 L500,114.7 L540,124.4 L580,137.5 L620,152.4 L660,167.2 L700,179.9 L740,189.0 L780,193.6 L820,193.6 L860,189.8 L900,183.3 L940,175.9 L980,169.0 L1020,163.8 L1060,160.8 L1100,159.9 L1140,160.1 L1180,160.4 L1220,159.3 L1260,155.8 L1300,149.3 L1340,140.1 L1380,129.0 L1420,117.6 L1460,107.7 L1500,100.9;M-60,125.9 L-20,141.6 L20,158.4 L60,174.1 L100,186.6 L140,194.7 L180,197.7 L220,195.9 L260,190.5 L300,183.1 L340,175.4 L380,169.0 L420,164.9 L460,163.1 L500,163.1 L540,163.8 L580,163.6 L620,161.2 L660,155.6 L700,146.6 L740,134.9 L780,121.8 L820,109.3 L860,99.2 L900,93.4 L940,92.9 L980,98.1 L1020,108.2 L1060,121.8 L1100,136.9 L1140,151.3 L1180,163.3 L1220,171.7 L1260,176.0 L1300,176.9 L1340,175.4 L1380,173.0 L1420,171.2 L1460,171.2 L1500,173.4" dur="14s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" keyTimes="0;0.33;0.66;1"></animate></path>
 <path d="M-60,149.3 L-20,165.8 L20,183.1 L60,198.9 L100,211.2 L140,218.6 L180,220.5 L220,217.2 L260,210.1 L300,200.8 L340,191.3 L380,183.2 L420,177.5 L460,174.6 L500,173.9 L540,174.0 L580,173.7 L620,171.3 L660,165.9 L700,157.4 L740,146.2 L780,133.9 L820,122.2 L860,113.3 L900,108.8 L940,109.9 L980,116.7 L1020,128.5 L1060,143.7 L1100,160.1 L1140,175.7 L1180,188.3 L1220,196.9 L1260,201.0 L1300,201.1 L1340,198.5 L1380,194.7 L1420,191.5 L1460,189.9 L1500,190.6" fill="none" stroke="#c9b48f" stroke-opacity="0.23" stroke-width="1"><animate attributeName="d" values="M-60,149.3 L-20,165.8 L20,183.1 L60,198.9 L100,211.2 L140,218.6 L180,220.5 L220,217.2 L260,210.1 L300,200.8 L340,191.3 L380,183.2 L420,177.5 L460,174.6 L500,173.9 L540,174.0 L580,173.7 L620,171.3 L660,165.9 L700,157.4 L740,146.2 L780,133.9 L820,122.2 L860,113.3 L900,108.8 L940,109.9 L980,116.7 L1020,128.5 L1060,143.7 L1100,160.1 L1140,175.7 L1180,188.3 L1220,196.9 L1260,201.0 L1300,201.1 L1340,198.5 L1380,194.7 L1420,191.5 L1460,189.9 L1500,190.6;M-60,234.0 L-20,227.7 L20,216.5 L60,202.4 L100,187.8 L140,174.9 L180,165.1 L220,159.2 L260,156.7 L300,156.4 L340,156.8 L380,155.9 L420,152.6 L460,146.2 L500,137.2 L540,126.7 L580,116.7 L620,109.4 L660,106.7 L700,109.9 L740,119.4 L780,134.4 L820,153.1 L860,173.0 L900,191.7 L940,206.7 L980,216.5 L1020,220.3 L1060,218.7 L1100,213.1 L1140,205.4 L1180,197.5 L1220,191.3 L1260,187.8 L1300,186.9 L1340,187.9 L1380,189.2 L1420,189.1 L1460,185.9 L1500,178.6;M-60,156.9 L-20,149.8 L20,146.2 L60,145.5 L100,146.8 L140,148.4 L180,149.0 L220,147.9 L260,144.6 L300,139.7 L340,134.3 L380,129.9 L420,128.0 L460,130.0 L500,136.3 L540,146.9 L580,160.7 L620,176.1 L660,191.1 L700,203.7 L740,212.3 L780,216.0 L820,214.8 L860,209.4 L900,201.3 L940,192.2 L980,183.7 L1020,177.1 L1060,173.0 L1100,171.3 L1140,171.0 L1180,171.1 L1220,170.0 L1260,166.7 L1300,160.6 L1340,151.9 L1380,141.5 L1420,130.9 L1460,121.9 L1500,116.2;M-60,149.3 L-20,165.8 L20,183.1 L60,198.9 L100,211.2 L140,218.6 L180,220.5 L220,217.2 L260,210.1 L300,200.8 L340,191.3 L380,183.2 L420,177.5 L460,174.6 L500,173.9 L540,174.0 L580,173.7 L620,171.3 L660,165.9 L700,157.4 L740,146.2 L780,133.9 L820,122.2 L860,113.3 L900,108.8 L940,109.9 L980,116.7 L1020,128.5 L1060,143.7 L1100,160.1 L1140,175.7 L1180,188.3 L1220,196.9 L1260,201.0 L1300,201.1 L1340,198.5 L1380,194.7 L1420,191.5 L1460,189.9 L1500,190.6" dur="15s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" keyTimes="0;0.33;0.66;1"></animate></path>
@@ -317,13 +318,13 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 <div class="bn-rise" style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #8a6a3e; margin-bottom: 24px">Venture Capital</div>
 <h1 class="bn-rise bn-d1" style="font-weight: 500; line-height: 1.12; letter-spacing: -0.01em; font-size: clamp(44px, 5.4vw, 104px); color: #121417; margin: 0 0 28px; max-width: 14em">Backing Founders.<br>Building Legacy.</h1>
 <p class="bn-rise bn-d2" style="font-size: clamp(17px, 1.3vw, 24px); font-weight: 300; line-height: 1.75; color: #4a4d55; max-width: 34em; margin: 0">For six decades, KP Sanghvi has built businesses meant to last. Our venture platform brings that same patience to the founders shaping what comes next.</p>
-<p class="bn-rise bn-d2" style="font-size: clamp(15px, 1.05vw, 19px); font-weight: 300; line-height: 1.75; color: #5a5d64; max-width: 36em; margin: 16px 0 0">We back teams in Luxury Fashion, Robotics and Automation, HealthTech, FinTech and TravelTech, with capital that stays for the long run.</p>
+<p class="bn-rise bn-d2" style="font-size: clamp(17px, 1.3vw, 24px); font-weight: 300; line-height: 1.75; color: #4a4d55; max-width: 34em; margin: 16px 0 0">We partner early, often before the product exists, and stay through every stage. Founders get capital, counsel and a network that spans industries and continents.</p>
 <div class="bn-rise bn-d2" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 32px; font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #8a6a3e"><span>India</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #c9bba1"></span><span>UAE</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #c9bba1"></span><span>United States</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #c9bba1"></span><span>Hong Kong</span></div>
 </div>
 </section>
 </div>
 <div class="hero-opt hero-constellation">
-<section style="position: relative; overflow: hidden; background: #0f1114; height: min(calc(100vh - 124px), 880px); min-height: 520px; scroll-snap-align: start" data-fp="1">
+<section style="position: relative; overflow: hidden; background: #0f1114; height: calc(100vh - 124px); min-height: 520px; scroll-snap-align: start" data-fp="1">
 <svg aria-hidden="true" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block">
 <g><animateTransform attributeName="transform" type="translate" values="0 0;-40 -12;0 0" dur="30s" repeatCount="indefinite"></animateTransform>
 <line x1="708" y1="513" x2="754" y2="585" stroke="#d4b483" stroke-opacity="0.28" stroke-dasharray="87" stroke-dashoffset="87"><animate attributeName="stroke-dashoffset" from="87" to="0" dur="1.2s" begin="0.20s" fill="freeze"></animate></line>
@@ -487,13 +488,13 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 <div class="bn-rise" style="font-size: 13px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #d4b483; margin-bottom: 24px">Venture Capital</div>
 <h1 class="bn-rise bn-d1" style="font-weight: 500; line-height: 1.12; letter-spacing: -0.01em; font-size: clamp(44px, 5.4vw, 104px); color: #ffffff; margin: 0 0 28px; max-width: 14em">Backing Founders.<br>Building Legacy.</h1>
 <p class="bn-rise bn-d2" style="font-size: clamp(17px, 1.3vw, 24px); font-weight: 300; line-height: 1.75; color: #c9cbd0; max-width: 34em; margin: 0">For six decades, KP Sanghvi has built businesses meant to last. Our venture platform brings that same patience to the founders shaping what comes next.</p>
-<p class="bn-rise bn-d2" style="font-size: clamp(15px, 1.05vw, 19px); font-weight: 300; line-height: 1.75; color: #a2a5ab; max-width: 36em; margin: 16px 0 0">We back teams in Luxury Fashion, Robotics and Automation, HealthTech, FinTech and TravelTech, with capital that stays for the long run.</p>
+<p class="bn-rise bn-d2" style="font-size: clamp(17px, 1.3vw, 24px); font-weight: 300; line-height: 1.75; color: #c9cbd0; max-width: 34em; margin: 16px 0 0">We partner early, often before the product exists, and stay through every stage. Founders get capital, counsel and a network that spans industries and continents.</p>
 <div class="bn-rise bn-d2" style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 32px; font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483"><span>India</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #5a5d64"></span><span>UAE</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #5a5d64"></span><span>United States</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #5a5d64"></span><span>Hong Kong</span></div>
 </div>
 </section>
 </div>
 
-<section id="why" style="position: relative; overflow: hidden; background: #ffffff; border-top: 1px solid #ece6db; padding: clamp(36px, 3.2vw, 64px) 0; min-height: min(calc(100vh - 124px), 880px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; scroll-snap-align: start" data-fp="1">
+<section id="why" style="position: relative; overflow: hidden; background: #ffffff; border-top: 1px solid #ece6db; padding: clamp(36px, 3.2vw, 64px) 0; min-height: calc(100vh - 124px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; scroll-snap-align: start" data-fp="1">
 <svg aria-hidden="true" width="480" height="480" viewBox="0 0 480 480" style="position: absolute; left: -200px; bottom: -200px; overflow: visible">
 <path d="M240,1 a239,239 0 1,1 0,478 a239,239 0 1,1 0,-478" fill="none" stroke="#e3dccd" stroke-width="1" stroke-dasharray="5 6"></path>
 <path d="M240,80 a160,160 0 1,1 0,320 a160,160 0 1,1 0,-320" fill="none" stroke="#ece6db" stroke-width="1"></path>
@@ -602,37 +603,95 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </div>
 <script>
 (function () {
-  if (window.__kpsFullPage) return;
-  window.__kpsFullPage = true;
-  var busy = false;
+  if (window.__kpsFullPage2) return;
+  window.__kpsFullPage2 = true;
+  var animating = false, locked = false, lastWheel = 0, accum = 0;
+  function isDoc(s) { return s === document.scrollingElement || s === document.documentElement || s === document.body; }
+  function scroller() {
+    var el = document.querySelector('[data-fp]');
+    var p = el && el.parentElement;
+    while (p && p !== document.body && p !== document.documentElement) {
+      var cs = getComputedStyle(p);
+      if (/(auto|scroll)/.test(cs.overflowY) && p.scrollHeight > p.clientHeight + 2) return p;
+      p = p.parentElement;
+    }
+    return document.scrollingElement || document.documentElement;
+  }
+  function getY(s) { return isDoc(s) ? window.pageYOffset : s.scrollTop; }
+  function setY(s, y) { if (isDoc(s)) window.scrollTo(0, y); else s.scrollTop = y; }
+  function viewH(s) { return isDoc(s) ? window.innerHeight : s.clientHeight; }
+  function maxY(s) { return (isDoc(s) ? document.documentElement.scrollHeight : s.scrollHeight) - viewH(s); }
   function headerH() { var h = document.querySelector('header'); return h ? h.offsetHeight : 0; }
-  function targets() {
-    var els = Array.prototype.slice.call(document.querySelectorAll('[data-fp]')).filter(function (e) { return e.offsetParent !== null || getComputedStyle(e).position === 'fixed'; });
-    var hh = headerH();
-    return els.map(function (e) { var r = e.getBoundingClientRect(); return { top: Math.max(0, r.top + window.scrollY - hh), bottom: r.bottom + window.scrollY }; });
+  function targets(s) {
+    var base = isDoc(s) ? 0 : s.getBoundingClientRect().top, y = getY(s), hh = headerH(), mx = maxY(s);
+    return Array.prototype.slice.call(document.querySelectorAll('[data-fp]'))
+      .filter(function (e) { return e.offsetParent !== null; })
+      .map(function (e) {
+        var r = e.getBoundingClientRect();
+        var top = r.top - base + y;
+        return { top: Math.min(mx, Math.max(0, top - hh)), bottom: top + r.height };
+      });
   }
-  function go(y) {
-    busy = true;
-    window.scrollTo({ top: y, behavior: 'smooth' });
-    setTimeout(function () { busy = false; }, 850);
+  function ease(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+  function go(s, to) {
+    var from = getY(s);
+    to = Math.max(0, Math.min(maxY(s), Math.round(to)));
+    if (Math.abs(to - from) < 2) return false;
+    animating = true; locked = true;
+    var start = null, dur = 900;
+    function step(ts) {
+      if (start === null) start = ts;
+      var t = Math.min(1, (ts - start) / dur);
+      setY(s, from + (to - from) * ease(t));
+      if (t < 1) requestAnimationFrame(step); else animating = false;
+    }
+    requestAnimationFrame(step);
+    return true;
   }
-  window.addEventListener('wheel', function (e) {
-    if (window.innerWidth < 900 || window.innerHeight < 600) return;
-    if (Math.abs(e.deltaY) < 3) return;
-    e.preventDefault();
-    if (busy) return;
-    var y = window.scrollY, view = window.innerHeight, t = targets();
-    if (!t.length) return;
+  function move(dir) {
+    var s = scroller();
+    if (maxY(s) <= 2) return false;
+    var y = getY(s), view = viewH(s), hh = headerH(), t = targets(s);
+    if (!t.length) return false;
     var i = 0;
     for (var k = 0; k < t.length; k++) { if (t[k].top <= y + 4) i = k; }
-    if (e.deltaY > 0) {
-      if (t[i].bottom > y + view + 4) { go(Math.min(t[i].bottom - view, y + view * 0.85)); return; }
-      if (i + 1 < t.length) go(t[i + 1].top);
+    if (dir > 0) {
+      if (t[i].bottom > y + view + 4) return go(s, Math.min(t[i].bottom - view, y + view - hh));
+      if (i + 1 < t.length) return go(s, t[i + 1].top);
+      return go(s, maxY(s));
     } else {
-      if (y > t[i].top + 4) { go(Math.max(t[i].top, y - view * 0.85)); return; }
-      if (i > 0) { var p = t[i - 1]; go(Math.max(p.top, p.bottom - view - headerH())); }
+      if (y > t[i].top + 4) return go(s, Math.max(t[i].top, y - (view - hh)));
+      if (i > 0) { var p = t[i - 1]; return go(s, Math.max(p.top, p.bottom - view)); }
+      return go(s, 0);
     }
+  }
+  function enabled() { return window.innerWidth >= 900 && window.innerHeight >= 560; }
+  window.addEventListener('wheel', function (e) {
+    if (!enabled() || e.ctrlKey) return;
+    var s = scroller();
+    if (maxY(s) <= 2) return;
+    e.preventDefault();
+    var now = Date.now(), gap = now - lastWheel;
+    lastWheel = now;
+    if (animating) return;
+    if (locked) { if (gap < 220) return; locked = false; }
+    if (gap > 220) accum = 0;
+    accum += e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY;
+    if (Math.abs(accum) < 12) return;
+    var dir = accum > 0 ? 1 : -1;
+    accum = 0;
+    move(dir);
   }, { passive: false });
+  window.addEventListener('keydown', function (e) {
+    if (!enabled() || animating) return;
+    var tag = (e.target && e.target.tagName) || '';
+    if (/INPUT|TEXTAREA|SELECT/.test(tag) || (e.target && e.target.isContentEditable)) return;
+    var dir = 0;
+    if (e.key === 'ArrowDown' || e.key === 'PageDown' || (e.key === ' ' && !e.shiftKey)) dir = 1;
+    if (e.key === 'ArrowUp' || e.key === 'PageUp' || (e.key === ' ' && e.shiftKey)) dir = -1;
+    if (!dir) return;
+    if (move(dir)) e.preventDefault();
+  });
 })();
 </script>
 </body>
