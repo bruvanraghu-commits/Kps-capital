@@ -98,6 +98,7 @@ a{color:#121417}a:hover{color:#8a6a3e}
 .kp-toggle:checked + .kp-burger span:nth-child(2){opacity:0}
 .kp-toggle:checked + .kp-burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 }
+@media (max-width: 760px){.st-tabs{grid-template-columns:1fr!important}}
 </style>
 <style>[hidden]{display:none!important}</style>
 </head>
@@ -310,9 +311,23 @@ a{color:#121417}a:hover{color:#8a6a3e}
 (function () {
   var a = 0, open = true, paused = false;
   var prog = [4, 27, 50, 74, 100];
+  function mobile() { return window.innerWidth <= 760; }
+  if (mobile()) paused = true;
+  function place() {
+    var wrap = document.getElementById('st-open'), tabs = document.querySelector('.st-tabs'); if (!wrap || !tabs) return;
+    if (mobile()) {
+      var tab = document.querySelector('.st-tab[data-i="' + a + '"]');
+      if (tab && tab.nextSibling !== wrap) tabs.insertBefore(wrap, tab.nextSibling);
+      wrap.style.gridColumn = '1 / -1'; wrap.style.margin = '0 0 8px';
+    } else if (wrap.parentNode === tabs) {
+      tabs.parentNode.insertBefore(wrap, tabs.nextSibling); wrap.style.gridColumn = ''; wrap.style.margin = '';
+    }
+  }
+  window.addEventListener('resize', place);
   var fit = function () {
   var sec = document.getElementById('stages'); if (!sec) return;
   var h = document.querySelector('header'); var hh = h && getComputedStyle(h).position === 'sticky' ? h.offsetHeight : 0;
+  if (mobile()) { var tb = document.querySelector('.st-tab[data-i="' + a + '"]'); if (tb) window.scrollTo({ top: Math.max(0, tb.getBoundingClientRect().top + window.pageYOffset - hh - 8), behavior: 'smooth' }); return; }
   var y = window.pageYOffset, vh = window.innerHeight;
   var t = sec.getBoundingClientRect().top + y - hh;
   var panels = Array.prototype.filter.call(document.querySelectorAll('.st-panel'), function (e) { return e.offsetParent !== null; });
@@ -342,6 +357,7 @@ a{color:#121417}a:hover{color:#8a6a3e}
     var wrap = document.getElementById('st-open'); if (wrap) wrap.hidden = !open;
     q('.st-panelwrap').forEach(function (w) { var on = open && +w.dataset.i === a; w.hidden = !on; if (on) replay(w.querySelector('.st-panel')); });
     var p = document.getElementById('st-progress-path'); if (p) p.style.strokeDashoffset = String(100 - prog[a]);
+    place();
   }
   q('.st-tab').forEach(function (b) {
     b.addEventListener('click', function () {
