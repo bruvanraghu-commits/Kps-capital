@@ -81,6 +81,22 @@ a{color:#121417}a:hover{color:#8a6a3e}
 @media (min-width: 1600px){.vc-stage{transform:scale(1)}.vc-hero-rings{height:460px!important}}
 @media (min-width: 2000px){.vc-stage{transform:scale(1.2)}.vc-hero-rings{height:560px!important}}
 @media (prefers-reduced-motion: reduce){.vc-orbit-a,.vc-orbit-b,.vc-orbit-c,.vc-chip,.vc-rise,.vc-spin,.vc-spin-back,.vc-float,.vc-float-alt,.vc-breathe,.vc-rail,.vc-spark,.vc-node,.vc-orb,.vc-dash{animation:none}.vc-dash{stroke-dashoffset:0}}
+.kp-toggle{position:absolute;opacity:0;pointer-events:none;width:0;height:0;margin:0}
+.kp-burger{display:none}
+@media (max-width: 760px){
+.kp-head{padding:12px 0!important}
+.kp-bar{flex-wrap:nowrap!important}
+.kp-logo{width:112px!important}
+.kp-burger{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;margin-right:-10px;cursor:pointer}
+.kp-burger span{display:block;width:22px;height:1.5px;background:#121417;transition:transform .3s ease,opacity .3s ease}
+.kp-nav{position:absolute;left:0;right:0;top:100%;background:#ffffff;border-bottom:1px solid #ece6db;flex-direction:column;align-items:stretch!important;gap:0!important;padding:4px 24px 20px;display:none!important;box-shadow:0 24px 32px -28px rgba(18,20,23,.35)}
+.kp-nav a{font-size:17px!important;padding:13px 0!important;border-bottom:1px solid #f1ece2!important}
+.kp-nav a.vc-btn{border-bottom:0!important;margin-top:14px;text-align:center;padding:14px 24px!important}
+.kp-toggle:checked ~ .kp-nav{display:flex!important}
+.kp-toggle:checked + .kp-burger span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.kp-toggle:checked + .kp-burger span:nth-child(2){opacity:0}
+.kp-toggle:checked + .kp-burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+}
 </style>
 <style>
 .hero-opt{display:none}
@@ -91,12 +107,14 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 <body data-hero="flow">
 <div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: clip">
 
-<header style="position: sticky; top: 0; z-index: 50; background: #ffffff; padding: 22px 0; border-bottom: 1px solid #ece6db">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
+<header class="kp-head" style="position: sticky; top: 0; z-index: 50; background: #ffffff; padding: 22px 0; border-bottom: 1px solid #ece6db">
+<div class="kp-bar" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
 <a href="https://kpsanghvi.com/" style="display: flex; align-items: center; text-decoration: none">
-<img src="kps-logo.png" alt="KP Sanghvi, since 1965" style="width: 175px; height: auto; display: block">
+<img src="kps-logo.png" alt="KP Sanghvi, since 1965" class="kp-logo" style="width: 175px; height: auto; display: block">
 </a>
-<nav style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
+<input type="checkbox" id="kpnav" class="kp-toggle" aria-label="Open menu">
+<label for="kpnav" class="kp-burger" aria-hidden="true"><span></span><span></span><span></span></label>
+<nav class="kp-nav" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
 <a href="where-we-invest.html" style="font-size: 15px; font-weight: 400; text-decoration: none; padding: 12px 0">Where We Invest</a>
 <a href="stages-we-invest.html" style="font-size: 15px; font-weight: 400; text-decoration: none; padding: 12px 0">Stages We Invest</a>
 <a class="vc-btn vc-btn-dark" href="https://kpsanghvi.com/reach-out/" style="font-size: 14px; font-weight: 500; text-decoration: none; background: #121417; color: #ffffff; padding: 12px 24px; border-radius: 999px">Pitch to Us</a>
