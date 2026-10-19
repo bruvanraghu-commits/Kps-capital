@@ -665,7 +665,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
   window.addEventListener('wheel', function (e) {
     if (!enabled() || e.ctrlKey) return;
     var s = scroller();
-    if (maxY(s) <= 2) return;
+    if (maxY(s) <= 2 || !document.querySelector('[data-fp]')) return;
     e.preventDefault();
     var now = Date.now(), gap = now - lastWheel;
     lastWheel = now;

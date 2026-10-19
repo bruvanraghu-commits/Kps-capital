@@ -87,7 +87,7 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </head>
 <body>
 <div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: clip">
-<header style="position: relative; z-index: 2; padding: 22px 0; border-bottom: 1px solid #ece6db">
+<header style="position: sticky; top: 0; z-index: 50; background: #ffffff; padding: 22px 0; border-bottom: 1px solid #ece6db">
 <div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
 <a href="https://kpsanghvi.com/" style="display: flex; align-items: center; text-decoration: none">
 <img src="kps-logo.png" alt="KP Sanghvi, since 1965" style="width: 175px; height: auto; display: block">
@@ -100,16 +100,16 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </nav>
 </div>
 </header>
-<section style="position: relative; overflow: hidden; background: #121417; color: #ffffff; padding: clamp(56px, 6vw, 96px) 0 clamp(24px, 2.5vw, 40px)">
+<section style="position: relative; overflow: hidden; background: #121417; color: #ffffff; padding: clamp(28px, 3vw, 52px) 0 clamp(12px, 1.4vw, 24px)">
 
 <div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
-<a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; color: #c9cbd0; margin-bottom: 32px; padding: 8px 0"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Venture Capital</a>
+<a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; color: #c9cbd0; margin-bottom: 14px; padding: 6px 0"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Venture Capital</a>
 <div class="vc-rise" style="font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #d4b483; font-weight: 500; margin-bottom: 16px">Stages We Invest</div>
-<h1 class="vc-rise vc-d1" style="font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; font-size: clamp(40px, 5vw, 90px); margin: 0 0 20px; max-width: 14em">From first cheque to scale</h1>
-<p class="vc-rise vc-d2" style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.8; color: #d6d8dc; max-width: 34em; margin: 0">Every company moves through stages. Each one asks something different of founders and their capital. Here is how the journey unfolds, step by step.</p>
+<h1 class="vc-rise vc-d1" style="font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; font-size: clamp(36px, 4.2vw, 76px); margin: 0 0 14px; max-width: 14em">From first cheque to scale</h1>
+<p class="vc-rise vc-d2" style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.7; color: #d6d8dc; max-width: 40em; margin: 0">Every company moves through stages. Each one asks something different of founders and their capital. Here is how the journey unfolds, step by step.</p>
 </div>
 </section>
-<section id="stages" style="position: relative; overflow: hidden; background: #121417; color: #ffffff; padding: clamp(24px, 3vw, 48px) 0 clamp(72px, 7vw, 112px)">
+<section id="stages" style="position: relative; overflow: hidden; background: #121417; color: #ffffff; padding: clamp(12px, 1.6vw, 28px) 0 clamp(56px, 6vw, 96px)">
 <div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
 <div class="st-chart" aria-hidden="true" style="margin: 0 0 clamp(24px, 2.5vw, 40px)">
 <svg viewBox="0 0 1200 280" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: auto; display: block; overflow: visible">
@@ -140,32 +140,32 @@ a{color:#121417}a:hover{color:#8a6a3e}
 <text x="1130" y="2" text-anchor="middle" font-family="Jost, sans-serif" font-size="13" font-weight="500" letter-spacing="0.6" fill="#6f727a" class="st-label" data-i="4">Series C+</text><circle cx="70" cy="242" r="6" fill="#d4b483" class="st-node" data-i="0" stroke="#d4b483" stroke-width="1.5" style="transition: fill 0.4s ease"></circle>
 </svg>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: clamp(36px, 3.5vw, 56px)">
-<button type="button" class="st-tab" data-i="0" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: #1c1f24; border: 1px solid #d4b483; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<div class="st-tabs" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin-bottom: clamp(16px, 1.8vw, 28px)">
+<button type="button" class="st-tab" data-i="0" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: #1c1f24; border: 1px solid #d4b483; border-radius: 14px; padding: 12px 16px 14px; min-height: 44px; display: flex; flex-direction: column; gap: 3px; transition: background 0.3s ease, border-color 0.3s ease">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">01</span>
 <span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Pre-Seed</span>
 <span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Idea stage</span>
 <span class="st-barwrap" data-i="0" style="display: contents"><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
 </button>
-<button type="button" class="st-tab" data-i="1" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<button type="button" class="st-tab" data-i="1" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 12px 16px 14px; min-height: 44px; display: flex; flex-direction: column; gap: 3px; transition: background 0.3s ease, border-color 0.3s ease">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">02</span>
 <span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Seed</span>
 <span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Product development</span>
 <span class="st-barwrap" data-i="1" style="display: contents" hidden><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
 </button>
-<button type="button" class="st-tab" data-i="2" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<button type="button" class="st-tab" data-i="2" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 12px 16px 14px; min-height: 44px; display: flex; flex-direction: column; gap: 3px; transition: background 0.3s ease, border-color 0.3s ease">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">03</span>
 <span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Series A</span>
 <span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Business model validation</span>
 <span class="st-barwrap" data-i="2" style="display: contents" hidden><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
 </button>
-<button type="button" class="st-tab" data-i="3" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<button type="button" class="st-tab" data-i="3" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 12px 16px 14px; min-height: 44px; display: flex; flex-direction: column; gap: 3px; transition: background 0.3s ease, border-color 0.3s ease">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">04</span>
 <span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Series B</span>
 <span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Scaling</span>
 <span class="st-barwrap" data-i="3" style="display: contents" hidden><span class="st-progress" style="position: absolute; left: 0; bottom: 0; height: 2px; background: #d4b483"></span></span>
 </button>
-<button type="button" class="st-tab" data-i="4" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 18px 20px 20px; min-height: 44px; display: flex; flex-direction: column; gap: 6px; transition: background 0.3s ease, border-color 0.3s ease">
+<button type="button" class="st-tab" data-i="4" aria-expanded="false" style="position: relative; overflow: hidden; text-align: left; cursor: pointer; font-family: inherit; background: transparent; border: 1px solid #2e3138; border-radius: 14px; padding: 12px 16px 14px; min-height: 44px; display: flex; flex-direction: column; gap: 3px; transition: background 0.3s ease, border-color 0.3s ease">
 <span style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; color: #d4b483">05</span>
 <span style="font-size: clamp(16px, 1.2vw, 20px); font-weight: 500; color: #ffffff; line-height: 1.2">Series C and beyond</span>
 <span style="font-size: 13px; font-weight: 300; color: #a2a5ab">Expansion and maturity</span>
@@ -173,12 +173,12 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </button>
 </div>
 <div id="st-open">
-<div style="border-top: 1px solid #2a2d33; padding-top: clamp(32px, 3vw, 48px)">
+<div style="border-top: 1px solid #2a2d33; padding-top: clamp(18px, 2vw, 30px)">
 <span class="st-panelwrap" data-i="0" style="display: contents">
 <div class="st-panel">
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 1 · Idea stage</div>
-<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Pre-Seed</h3>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Turn an idea into an initial business concept.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 8px">Step 1 · Idea stage</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(26px, 2.4vw, 44px); color: #ffffff; margin: 0 0 8px">Pre-Seed</h3>
+<p style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 18px; max-width: 36em">Turn an idea into an initial business concept.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Founders, prototypes, market research and early product development.</p></div>
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Angel investors, startup accelerators and pre-seed funds.</p></div>
@@ -188,9 +188,9 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </span>
 <span class="st-panelwrap" data-i="1" style="display: contents" hidden>
 <div class="st-panel">
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 2 · Product development</div>
-<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Seed</h3>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Build the first product and validate customer demand.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 8px">Step 2 · Product development</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(26px, 2.4vw, 44px); color: #ffffff; margin: 0 0 8px">Seed</h3>
+<p style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 18px; max-width: 36em">Build the first product and validate customer demand.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">MVP development, hiring, customer acquisition and product testing.</p></div>
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Seed-stage VC firms, angel investors and micro VCs.</p></div>
@@ -200,9 +200,9 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </span>
 <span class="st-panelwrap" data-i="2" style="display: contents" hidden>
 <div class="st-panel">
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 3 · Business model validation</div>
-<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Series A</h3>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Build a repeatable business model and grow revenue.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 8px">Step 3 · Business model validation</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(26px, 2.4vw, 44px); color: #ffffff; margin: 0 0 8px">Series A</h3>
+<p style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 18px; max-width: 36em">Build a repeatable business model and grow revenue.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Product improvement, sales teams, marketing and operational systems.</p></div>
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Institutional VC firms.</p></div>
@@ -212,9 +212,9 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </span>
 <span class="st-panelwrap" data-i="3" style="display: contents" hidden>
 <div class="st-panel">
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 4 · Scaling</div>
-<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Series B</h3>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Expand a proven business rapidly.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 8px">Step 4 · Scaling</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(26px, 2.4vw, 44px); color: #ffffff; margin: 0 0 8px">Series B</h3>
+<p style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 18px; max-width: 36em">Expand a proven business rapidly.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">New markets, hiring at scale, technology infrastructure and acquisitions.</p></div>
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Growth-oriented VC firms and larger institutional investors.</p></div>
@@ -224,9 +224,9 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </span>
 <span class="st-panelwrap" data-i="4" style="display: contents" hidden>
 <div class="st-panel">
-<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 12px">Step 5 · Expansion and maturity</div>
-<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(30px, 3vw, 54px); color: #ffffff; margin: 0 0 14px">Series C and beyond</h3>
-<p style="font-size: clamp(18px, 1.4vw, 26px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 28px; max-width: 30em">Fund major expansion and prepare for a public listing or acquisition.</p>
+<div style="font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #d4b483; margin-bottom: 8px">Step 5 · Expansion and maturity</div>
+<h3 style="font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(26px, 2.4vw, 44px); color: #ffffff; margin: 0 0 8px">Series C and beyond</h3>
+<p style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.5; color: #e6e7ea; margin: 0 0 18px; max-width: 36em">Fund major expansion and prepare for a public listing or acquisition.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 20px 32px; align-items: flex-start">
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Where capital goes</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">International growth, acquisitions, new business lines and market leadership.</p></div>
 <div style="flex: 1 1 240px; padding: 18px 0 0; border-top: 1px solid #2e3138"><div style="font-size: 12px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase; color: #a2a5ab; margin-bottom: 10px">Who typically invests</div><p style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #e6e7ea; margin: 0">Late-stage VC firms, growth equity funds and institutional investors.</p></div>
@@ -292,6 +292,22 @@ a{color:#121417}a:hover{color:#8a6a3e}
 (function () {
   var a = 0, open = true, paused = false;
   var prog = [4, 27, 50, 74, 100];
+  var fit = function () {
+  var sec = document.getElementById('stages'); if (!sec) return;
+  var h = document.querySelector('header'); var hh = h && getComputedStyle(h).position === 'sticky' ? h.offsetHeight : 0;
+  var y = window.pageYOffset, vh = window.innerHeight;
+  var t = sec.getBoundingClientRect().top + y - hh;
+  var panels = Array.prototype.filter.call(document.querySelectorAll('.st-panel'), function (e) { return e.offsetParent !== null; });
+  if (panels.length) {
+    var pb = panels[0].getBoundingClientRect().bottom + y + 24;
+    if (pb > t + vh) {
+      var tabs = document.querySelector('.st-tabs');
+      var cap = tabs ? tabs.getBoundingClientRect().top + y - hh - 16 : pb - vh;
+      t = Math.min(pb - vh, cap);
+    }
+  }
+  if (Math.abs(t - y) > 4) window.scrollTo({ top: Math.max(0, t), behavior: 'smooth' });
+    };
   function q(sel) { return Array.prototype.slice.call(document.querySelectorAll(sel)); }
   function replay(el) { if (!el) return; el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; }
   function render() {
@@ -314,6 +330,7 @@ a{color:#121417}a:hover{color:#8a6a3e}
       var i = +b.dataset.i;
       if (open && i === a && paused) { open = false; } else { a = i; open = true; paused = true; }
       render();
+      if (open) setTimeout(fit, 80);
     });
   });
   setInterval(function () { if (!paused) { a = (a + 1) % 5; render(); } }, 6000);
