@@ -97,6 +97,10 @@ a{color:#121417}a:hover{color:#8a6a3e}
 .kp-toggle:checked + .kp-burger span:nth-child(2){opacity:0}
 .kp-toggle:checked + .kp-burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 }
+:root{--kph:124px}
+.kp-head{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.kp-head.kp-hide{transform:translateY(calc(-100% - 4px))}
+@media (max-width: 760px){:root{--kph:75px}}
 </style>
 <style>
 .hero-opt{display:none}
@@ -107,7 +111,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 <body data-hero="flow">
 <div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: clip">
 
-<header class="kp-head" style="position: sticky; top: 0; z-index: 50; background: #ffffff; padding: 22px 0; border-bottom: 1px solid #ece6db">
+<header class="kp-head" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: #ffffff; padding: 22px 0; border-bottom: 1px solid #ece6db">
 <div class="kp-bar" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
 <a href="https://kpsanghvi.com/" style="display: flex; align-items: center; text-decoration: none">
 <img src="kps-logo.png" alt="KP Sanghvi, since 1965" class="kp-logo" style="width: 175px; height: auto; display: block">
@@ -123,7 +127,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </header>
 
 <div class="hero-opt hero-seed">
-<section style="position: relative; overflow: hidden; padding: clamp(40px, 4.5vw, 72px) 0; min-height: calc(100vh - 124px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; scroll-snap-align: start" data-fp="1">
+<section style="position: relative; overflow: hidden; padding: calc(var(--kph) + clamp(24px, 3vw, 48px)) 0 clamp(40px, 4.5vw, 72px); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; scroll-snap-align: start" data-fp="1">
 <div aria-hidden="true" class="vc-breathe" style="position: absolute; top: -10vw; right: -8vw; width: clamp(360px, 38vw, 900px); height: clamp(360px, 38vw, 900px); border-radius: 50%; background: #f6efe2"></div>
 <div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 32px 56px">
 <div style="flex: 1.2 1 480px; min-width: 0">
@@ -168,7 +172,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </section>
 </div>
 <div class="hero-opt hero-globe">
-<section style="position: relative; overflow: hidden; background: #0f1114; height: calc(100vh - 124px); min-height: 520px; scroll-snap-align: start" data-fp="1">
+<section style="position: relative; overflow: hidden; background: #0f1114; height: 100vh; min-height: 640px; padding-top: var(--kph); box-sizing: border-box; scroll-snap-align: start" data-fp="1">
 <svg aria-hidden="true" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block">
 <defs><radialGradient id="gGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0.7" stop-color="#d4b483" stop-opacity="0.18"></stop><stop offset="1" stop-color="#d4b483" stop-opacity="0"></stop></radialGradient><radialGradient id="gBody" cx="0.35" cy="0.3" r="0.8"><stop offset="0" stop-color="#23262c"></stop><stop offset="1" stop-color="#0f1114"></stop></radialGradient><clipPath id="gClip"><circle cx="1040" cy="560" r="400"></circle></clipPath></defs>
 <circle cx="897" cy="564" r="0.8" fill="#ffffff" opacity="0.4"><animate attributeName="opacity" values="0.15;0.8;0.15" dur="6.4s" begin="-4.7s" repeatCount="indefinite"></animate></circle>
@@ -292,7 +296,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </section>
 </div>
 <div class="hero-opt hero-flow">
-<section style="position: relative; overflow: hidden; background: #faf7f1; height: calc(100vh - 124px); min-height: 520px; scroll-snap-align: start" data-fp="1">
+<section style="position: relative; overflow: hidden; background: #faf7f1; height: 100vh; min-height: 640px; padding-top: var(--kph); box-sizing: border-box; scroll-snap-align: start" data-fp="1">
 <svg aria-hidden="true" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block">
 <path d="M-60,125.9 L-20,141.6 L20,158.4 L60,174.1 L100,186.6 L140,194.7 L180,197.7 L220,195.9 L260,190.5 L300,183.1 L340,175.4 L380,169.0 L420,164.9 L460,163.1 L500,163.1 L540,163.8 L580,163.6 L620,161.2 L660,155.6 L700,146.6 L740,134.9 L780,121.8 L820,109.3 L860,99.2 L900,93.4 L940,92.9 L980,98.1 L1020,108.2 L1060,121.8 L1100,136.9 L1140,151.3 L1180,163.3 L1220,171.7 L1260,176.0 L1300,176.9 L1340,175.4 L1380,173.0 L1420,171.2 L1460,171.2 L1500,173.4" fill="none" stroke="#c9b48f" stroke-opacity="0.22" stroke-width="1"><animate attributeName="d" values="M-60,125.9 L-20,141.6 L20,158.4 L60,174.1 L100,186.6 L140,194.7 L180,197.7 L220,195.9 L260,190.5 L300,183.1 L340,175.4 L380,169.0 L420,164.9 L460,163.1 L500,163.1 L540,163.8 L580,163.6 L620,161.2 L660,155.6 L700,146.6 L740,134.9 L780,121.8 L820,109.3 L860,99.2 L900,93.4 L940,92.9 L980,98.1 L1020,108.2 L1060,121.8 L1100,136.9 L1140,151.3 L1180,163.3 L1220,171.7 L1260,176.0 L1300,176.9 L1340,175.4 L1380,173.0 L1420,171.2 L1460,171.2 L1500,173.4;M-60,212.9 L-20,208.5 L20,199.4 L60,187.5 L100,174.9 L140,163.8 L180,155.4 L220,150.4 L260,148.3 L300,148.1 L340,148.0 L380,146.5 L420,142.2 L460,134.8 L500,124.6 L540,112.8 L580,101.5 L620,92.7 L660,88.5 L700,90.2 L740,98.0 L780,111.4 L820,128.7 L860,147.6 L900,165.6 L940,180.4 L980,190.5 L1020,195.2 L1060,195.0 L1100,191.1 L1140,185.3 L1180,179.5 L1220,175.2 L1260,173.5 L1300,174.1 L1340,176.3 L1380,178.6 L1420,179.2 L1460,176.4 L1500,169.3;M-60,146.5 L-20,139.9 L20,136.4 L60,135.4 L100,136.0 L140,136.7 L180,136.3 L220,133.9 L260,129.5 L300,123.5 L340,116.9 L380,111.4 L420,108.5 L460,109.4 L500,114.7 L540,124.4 L580,137.5 L620,152.4 L660,167.2 L700,179.9 L740,189.0 L780,193.6 L820,193.6 L860,189.8 L900,183.3 L940,175.9 L980,169.0 L1020,163.8 L1060,160.8 L1100,159.9 L1140,160.1 L1180,160.4 L1220,159.3 L1260,155.8 L1300,149.3 L1340,140.1 L1380,129.0 L1420,117.6 L1460,107.7 L1500,100.9;M-60,125.9 L-20,141.6 L20,158.4 L60,174.1 L100,186.6 L140,194.7 L180,197.7 L220,195.9 L260,190.5 L300,183.1 L340,175.4 L380,169.0 L420,164.9 L460,163.1 L500,163.1 L540,163.8 L580,163.6 L620,161.2 L660,155.6 L700,146.6 L740,134.9 L780,121.8 L820,109.3 L860,99.2 L900,93.4 L940,92.9 L980,98.1 L1020,108.2 L1060,121.8 L1100,136.9 L1140,151.3 L1180,163.3 L1220,171.7 L1260,176.0 L1300,176.9 L1340,175.4 L1380,173.0 L1420,171.2 L1460,171.2 L1500,173.4" dur="14s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" keyTimes="0;0.33;0.66;1"></animate></path>
 <path d="M-60,149.3 L-20,165.8 L20,183.1 L60,198.9 L100,211.2 L140,218.6 L180,220.5 L220,217.2 L260,210.1 L300,200.8 L340,191.3 L380,183.2 L420,177.5 L460,174.6 L500,173.9 L540,174.0 L580,173.7 L620,171.3 L660,165.9 L700,157.4 L740,146.2 L780,133.9 L820,122.2 L860,113.3 L900,108.8 L940,109.9 L980,116.7 L1020,128.5 L1060,143.7 L1100,160.1 L1140,175.7 L1180,188.3 L1220,196.9 L1260,201.0 L1300,201.1 L1340,198.5 L1380,194.7 L1420,191.5 L1460,189.9 L1500,190.6" fill="none" stroke="#c9b48f" stroke-opacity="0.23" stroke-width="1"><animate attributeName="d" values="M-60,149.3 L-20,165.8 L20,183.1 L60,198.9 L100,211.2 L140,218.6 L180,220.5 L220,217.2 L260,210.1 L300,200.8 L340,191.3 L380,183.2 L420,177.5 L460,174.6 L500,173.9 L540,174.0 L580,173.7 L620,171.3 L660,165.9 L700,157.4 L740,146.2 L780,133.9 L820,122.2 L860,113.3 L900,108.8 L940,109.9 L980,116.7 L1020,128.5 L1060,143.7 L1100,160.1 L1140,175.7 L1180,188.3 L1220,196.9 L1260,201.0 L1300,201.1 L1340,198.5 L1380,194.7 L1420,191.5 L1460,189.9 L1500,190.6;M-60,234.0 L-20,227.7 L20,216.5 L60,202.4 L100,187.8 L140,174.9 L180,165.1 L220,159.2 L260,156.7 L300,156.4 L340,156.8 L380,155.9 L420,152.6 L460,146.2 L500,137.2 L540,126.7 L580,116.7 L620,109.4 L660,106.7 L700,109.9 L740,119.4 L780,134.4 L820,153.1 L860,173.0 L900,191.7 L940,206.7 L980,216.5 L1020,220.3 L1060,218.7 L1100,213.1 L1140,205.4 L1180,197.5 L1220,191.3 L1260,187.8 L1300,186.9 L1340,187.9 L1380,189.2 L1420,189.1 L1460,185.9 L1500,178.6;M-60,156.9 L-20,149.8 L20,146.2 L60,145.5 L100,146.8 L140,148.4 L180,149.0 L220,147.9 L260,144.6 L300,139.7 L340,134.3 L380,129.9 L420,128.0 L460,130.0 L500,136.3 L540,146.9 L580,160.7 L620,176.1 L660,191.1 L700,203.7 L740,212.3 L780,216.0 L820,214.8 L860,209.4 L900,201.3 L940,192.2 L980,183.7 L1020,177.1 L1060,173.0 L1100,171.3 L1140,171.0 L1180,171.1 L1220,170.0 L1260,166.7 L1300,160.6 L1340,151.9 L1380,141.5 L1420,130.9 L1460,121.9 L1500,116.2;M-60,149.3 L-20,165.8 L20,183.1 L60,198.9 L100,211.2 L140,218.6 L180,220.5 L220,217.2 L260,210.1 L300,200.8 L340,191.3 L380,183.2 L420,177.5 L460,174.6 L500,173.9 L540,174.0 L580,173.7 L620,171.3 L660,165.9 L700,157.4 L740,146.2 L780,133.9 L820,122.2 L860,113.3 L900,108.8 L940,109.9 L980,116.7 L1020,128.5 L1060,143.7 L1100,160.1 L1140,175.7 L1180,188.3 L1220,196.9 L1260,201.0 L1300,201.1 L1340,198.5 L1380,194.7 L1420,191.5 L1460,189.9 L1500,190.6" dur="15s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" keyTimes="0;0.33;0.66;1"></animate></path>
@@ -342,7 +346,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </section>
 </div>
 <div class="hero-opt hero-constellation">
-<section style="position: relative; overflow: hidden; background: #0f1114; height: calc(100vh - 124px); min-height: 520px; scroll-snap-align: start" data-fp="1">
+<section style="position: relative; overflow: hidden; background: #0f1114; height: 100vh; min-height: 640px; padding-top: var(--kph); box-sizing: border-box; scroll-snap-align: start" data-fp="1">
 <svg aria-hidden="true" viewBox="0 0 1440 760" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%; display: block">
 <g><animateTransform attributeName="transform" type="translate" values="0 0;-40 -12;0 0" dur="30s" repeatCount="indefinite"></animateTransform>
 <line x1="708" y1="513" x2="754" y2="585" stroke="#d4b483" stroke-opacity="0.28" stroke-dasharray="87" stroke-dashoffset="87"><animate attributeName="stroke-dashoffset" from="87" to="0" dur="1.2s" begin="0.20s" fill="freeze"></animate></line>
@@ -512,7 +516,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
 </section>
 </div>
 
-<section id="why" style="position: relative; overflow: hidden; background: #ffffff; border-top: 1px solid #ece6db; padding: clamp(36px, 3.2vw, 64px) 0; min-height: calc(100vh - 124px); display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; scroll-snap-align: start" data-fp="1">
+<section id="why" style="position: relative; overflow: hidden; background: #ffffff; border-top: 1px solid #ece6db; padding: clamp(36px, 3.2vw, 64px) 0; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; box-sizing: border-box; scroll-snap-align: start" data-fp="1">
 
 <div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
 <div style="display: flex; flex-wrap: wrap; gap: 32px 80px; align-items: flex-start; margin-bottom: clamp(44px, 4.4vw, 80px)">
@@ -627,7 +631,7 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
   function setY(s, y) { if (isDoc(s)) window.scrollTo(0, y); else s.scrollTop = y; }
   function viewH(s) { return isDoc(s) ? window.innerHeight : s.clientHeight; }
   function maxY(s) { return (isDoc(s) ? document.documentElement.scrollHeight : s.scrollHeight) - viewH(s); }
-  function headerH() { var h = document.querySelector('header'); return h ? h.offsetHeight : 0; }
+  function headerH() { var h = document.querySelector('header'); return h && getComputedStyle(h).position === 'sticky' ? h.offsetHeight : 0; }
   function targets(s) {
     var base = isDoc(s) ? 0 : s.getBoundingClientRect().top, y = getY(s), hh = headerH(), mx = maxY(s);
     return Array.prototype.slice.call(document.querySelectorAll('[data-fp]'))
@@ -699,6 +703,26 @@ body[data-hero="seed"] .hero-seed,body[data-hero="globe"] .hero-globe,body[data-
     if (move(dir)) e.preventDefault();
   });
 })();
+</script><script>
+(function () {
+      if (window.__kpsHead) return;
+      window.__kpsHead = true;
+      var h = document.querySelector('.kp-head'); if (!h) return;
+      var lastY = window.pageYOffset, hover = false;
+      function show() { h.classList.remove('kp-hide'); }
+      function hide() { var t = document.getElementById('kpnav'); if ((t && t.checked) || hover) return; h.classList.add('kp-hide'); }
+      window.addEventListener('scroll', function () {
+        var y = window.pageYOffset;
+        if (y < 40) show(); else if (y > lastY + 2) hide(); else if (y < lastY - 2 && ('ontouchstart' in window)) show();
+        lastY = y;
+      }, { passive: true });
+      document.addEventListener('mousemove', function (e) {
+        if (e.clientY <= 90) show();
+        else if (!h.contains(e.target) && window.pageYOffset > 40 && e.clientY > h.offsetHeight + 40) hide();
+      });
+      h.addEventListener('mouseenter', function () { hover = true; show(); });
+      h.addEventListener('mouseleave', function () { hover = false; });
+    })();
 </script>
 </body>
 </html>
