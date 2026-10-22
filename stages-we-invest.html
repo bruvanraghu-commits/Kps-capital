@@ -65,7 +65,7 @@ a{color:#121417}a:hover{color:#8a6a3e}
 .vc-node:hover .vc-orb{transform:translateY(-6px);background:#ffffff}
 @media (max-width: 1080px){.vc-rail,.vc-track{display:none}}
 @keyframes stFill{from{width:0}to{width:100%}}
-.st-progress{animation:stFill 5s linear both}
+.st-progress{animation:stFill 3s linear both}
 @keyframes stIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .st-panel{animation:stIn .6s cubic-bezier(.2,.7,.2,1) both}
 @media (max-width: 760px){.st-chart{display:none}}
@@ -78,7 +78,7 @@ a{color:#121417}a:hover{color:#8a6a3e}
 @media (min-width: 2000px){.vc-stage{transform:scale(1.2)}.vc-hero-rings{height:560px!important}}
 @media (prefers-reduced-motion: reduce){.vc-orbit-a,.vc-orbit-b,.vc-orbit-c,.vc-chip,.vc-rise,.vc-spin,.vc-spin-back,.vc-float,.vc-float-alt,.vc-breathe,.vc-rail,.vc-spark,.vc-node,.vc-orb,.vc-dash{animation:none}.vc-dash{stroke-dashoffset:0}}
 @keyframes stFill{from{width:0}to{width:100%}}
-.st-progress{animation:stFill 5s linear both}
+.st-progress{animation:stFill 3s linear both}
 @keyframes stIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 .st-panel{animation:stIn .6s cubic-bezier(.2,.7,.2,1) both}
 @media (max-width: 760px){.st-chart{display:none}}
@@ -99,6 +99,9 @@ a{color:#121417}a:hover{color:#8a6a3e}
 .kp-toggle:checked + .kp-burger span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 }
 @media (max-width: 760px){.st-tabs{grid-template-columns:1fr!important}}
+.eg-grid .eg-item:first-child{border-left:0!important;padding-left:0!important}
+@media (max-width: 1080px){.eg-grid{grid-template-columns:repeat(2,1fr)!important}.eg-grid .eg-item{border-left:0!important;border-top:1px solid #ece6db;padding-left:0!important}.eg-grid .eg-item:nth-child(-n+2){border-top:0}}
+@media (max-width: 560px){.eg-grid{grid-template-columns:1fr!important}.eg-grid .eg-item:nth-child(2){border-top:1px solid #ece6db}}
 </style>
 <style>[hidden]{display:none!important}</style>
 </head>
@@ -106,13 +109,12 @@ a{color:#121417}a:hover{color:#8a6a3e}
 <div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: clip">
 <header class="kp-head" style="position: sticky; top: 0; z-index: 50; background: #ffffff; padding: 22px 0; border-bottom: 1px solid #ece6db">
 <div class="kp-bar" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
-<a href="https://kpsanghvi.com/" style="display: flex; align-items: center; text-decoration: none">
+<a aria-label="Venture Capital home" href="index.html" style="display: flex; align-items: center; text-decoration: none">
 <img src="kps-logo.png" alt="KP Sanghvi, since 1965" class="kp-logo" style="width: 175px; height: auto; display: block">
 </a>
 <input type="checkbox" id="kpnav" class="kp-toggle" aria-label="Open menu">
 <label for="kpnav" class="kp-burger" aria-hidden="true"><span></span><span></span><span></span></label>
 <nav class="kp-nav" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
-<a href="index.html" style="font-size: 15px; font-weight: 400; text-decoration: none; padding: 12px 0">Venture Capital</a>
 <a href="where-we-invest.html" style="font-size: 15px; font-weight: 400; text-decoration: none; padding: 12px 0">Where We Invest</a>
 <a href="stages-we-invest.html" aria-current="page" style="font-size: 15px; font-weight: 500; text-decoration: none; padding: 12px 0 10px; border-bottom: 2px solid #a8834f">Stages We Invest</a>
 <a class="vc-btn vc-btn-dark" href="https://kpsanghvi.com/reach-out/" style="font-size: 14px; font-weight: 500; text-decoration: none; background: #121417; color: #ffffff; padding: 12px 24px; border-radius: 999px">Pitch to Us</a>
@@ -122,10 +124,9 @@ a{color:#121417}a:hover{color:#8a6a3e}
 <section style="position: relative; overflow: hidden; background: #121417; color: #ffffff; padding: clamp(28px, 3vw, 52px) 0 clamp(12px, 1.4vw, 24px)">
 
 <div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
-<a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; color: #c9cbd0; margin-bottom: 14px; padding: 6px 0"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"></path></svg>Venture Capital</a>
 <div class="vc-rise" style="font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: #d4b483; font-weight: 500; margin-bottom: 16px">Stages We Invest</div>
-<h1 class="vc-rise vc-d1" style="font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; font-size: clamp(36px, 4.2vw, 76px); margin: 0 0 14px; max-width: 14em">From first cheque to scale</h1>
-<p class="vc-rise vc-d2" style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.7; color: #d6d8dc; max-width: 40em; margin: 0">Every company moves through stages. Each one asks something different of founders and their capital. Here is how the journey unfolds, step by step.</p>
+<h1 class="vc-rise vc-d1" style="font-weight: 500; line-height: 1.05; letter-spacing: -0.02em; font-size: clamp(36px, 4.2vw, 76px); margin: 0 0 14px; max-width: 14em">A partner at every stage</h1>
+<p class="vc-rise vc-d2" style="font-size: clamp(16px, 1.2vw, 22px); font-weight: 300; line-height: 1.7; color: #d6d8dc; max-width: 40em; margin: 0">Every company moves through stages. Each one asks something different of its founders. We stay close throughout, bringing capital, strategic guidance, mentorship and the right introductions.</p>
 </div>
 </section>
 <section id="stages" style="position: relative; overflow: hidden; background: #121417; color: #ffffff; padding: clamp(12px, 1.6vw, 28px) 0 clamp(56px, 6vw, 96px)">
@@ -136,7 +137,7 @@ a{color:#121417}a:hover{color:#8a6a3e}
 <path d="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22 L1180,270 L20,270 Z" fill="url(#stFill)" opacity="0.6"></path>
 <path d="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22" fill="none" stroke="#2e3138" stroke-width="2"></path>
 <path d="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22" pathLength="100" fill="none" stroke="#d4b483" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="100" id="st-progress-path" style="stroke-dashoffset: 96; transition: stroke-dashoffset 0.9s cubic-bezier(.6,0,.2,1)"></path>
-<circle r="3" fill="#ffffff"><animateMotion dur="6s" repeatCount="indefinite" path="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22"></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="6s" repeatCount="indefinite"></animate></circle>
+<circle r="3" fill="#ffffff"><animateMotion dur="3s" repeatCount="indefinite" class="st-dot" keyPoints="0;0.04" keyTimes="0;1" calcMode="linear" path="M20,248 C120,240 200,214 335,200 S520,168 600,152 S780,112 865,96 S1060,52 1180,22"></animateMotion><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="3s" repeatCount="indefinite"></animate></circle>
 <line x1="70" y1="254" x2="70" y2="270" stroke="#2e3138" stroke-dasharray="2 5"></line>
 <circle cx="70" cy="242" r="16" fill="#d4b483" fill-opacity="0.18" class="st-halo" data-i="0"><animate attributeName="r" values="12;26;12" dur="2.6s" repeatCount="indefinite"></animate></circle>
 
@@ -257,6 +258,34 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </div>
 </div>
 </section>
+<section id="enable" style="position: relative; background: #ffffff; color: #121417; padding: clamp(56px, 6vw, 96px) 0">
+<div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
+<div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: clamp(32px, 3.4vw, 56px)">
+<div>
+<div style="font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: #8a6a3e; font-weight: 500; margin-bottom: 14px">Beyond Capital</div>
+<h2 style="font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; font-size: clamp(30px, 2.8vw, 48px); margin: 0">Enabling the Next Stage of Growth</h2>
+</div>
+<p style="font-size: clamp(16px, 1.15vw, 20px); font-weight: 300; line-height: 1.7; color: #4a4d55; margin: 0; max-width: 40em">Beyond investment, we bring the experience, structure and strategic perspective that help businesses scale.</p>
+</div>
+<div class="eg-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid #ece6db; border-bottom: 1px solid #ece6db"><div class="eg-item" style="padding: clamp(22px, 2.2vw, 32px) clamp(16px, 1.6vw, 24px); border-left: 1px solid #ece6db">
+<div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e3d9c8; display: flex; align-items: center; justify-content: center; margin-bottom: 20px"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M15.5 8.5l-2 5-5 2 2-5z"></path></svg></div>
+<h3 style="font-weight: 500; font-size: clamp(17px, 1.25vw, 21px); line-height: 1.25; margin: 0 0 8px; color: #121417">Strategy &amp; Direction</h3>
+<p style="font-size: clamp(14px, 0.95vw, 16px); font-weight: 300; line-height: 1.6; color: #5a5d65; margin: 0">Defining priorities and growth roadmaps</p>
+</div><div class="eg-item" style="padding: clamp(22px, 2.2vw, 32px) clamp(16px, 1.6vw, 24px); border-left: 1px solid #ece6db">
+<div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e3d9c8; display: flex; align-items: center; justify-content: center; margin-bottom: 20px"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v16M7 20h10M5 7h14M12 4l0 3"></path><path d="M5 7l-3 6a3 3 0 0 0 6 0z"></path><path d="M19 7l-3 6a3 3 0 0 0 6 0z"></path></svg></div>
+<h3 style="font-weight: 500; font-size: clamp(17px, 1.25vw, 21px); line-height: 1.25; margin: 0 0 8px; color: #121417">Governance &amp; Policies</h3>
+<p style="font-size: clamp(14px, 0.95vw, 16px); font-weight: 300; line-height: 1.6; color: #5a5d65; margin: 0">Building robust frameworks and accountability</p>
+</div><div class="eg-item" style="padding: clamp(22px, 2.2vw, 32px) clamp(16px, 1.6vw, 24px); border-left: 1px solid #ece6db">
+<div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e3d9c8; display: flex; align-items: center; justify-content: center; margin-bottom: 20px"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h9M17 8h3M4 16h3M11 16h9"></path><circle cx="15" cy="8" r="2"></circle><circle cx="9" cy="16" r="2"></circle></svg></div>
+<h3 style="font-weight: 500; font-size: clamp(17px, 1.25vw, 21px); line-height: 1.25; margin: 0 0 8px; color: #121417">Operational Excellence</h3>
+<p style="font-size: clamp(14px, 0.95vw, 16px); font-weight: 300; line-height: 1.6; color: #5a5d65; margin: 0">Creating efficient, scalable processes</p>
+</div><div class="eg-item" style="padding: clamp(22px, 2.2vw, 32px) clamp(16px, 1.6vw, 24px); border-left: 1px solid #ece6db">
+<div style="width: 52px; height: 52px; border-radius: 50%; border: 1px solid #e3d9c8; display: flex; align-items: center; justify-content: center; margin-bottom: 20px"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"></circle><circle cx="5.5" cy="18" r="2.2"></circle><circle cx="18.5" cy="18" r="2.2"></circle><path d="M12 7.2v4.3M12 11.5l-5.2 4.6M12 11.5l5.2 4.6"></path></svg></div>
+<h3 style="font-weight: 500; font-size: clamp(17px, 1.25vw, 21px); line-height: 1.25; margin: 0 0 8px; color: #121417">Strategic Networks</h3>
+<p style="font-size: clamp(14px, 0.95vw, 16px); font-weight: 300; line-height: 1.6; color: #5a5d65; margin: 0">Unlocking relationships and partnerships</p>
+</div></div>
+</div>
+</section>
 <section style="position: relative; overflow: hidden; background: #0f1114; color: #ffffff; text-align: center; padding: clamp(90px, 10vw, 140px) 0">
 <svg aria-hidden="true" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" style="position: absolute; inset: 0; width: 100%; height: 100%"><path d="M0,520 C300,500 500,420 720,330 S1150,140 1440,80" fill="none" stroke="#d4b483" stroke-opacity="0.35" stroke-width="2"></path><g><circle r="5" fill="#d4b483"></circle><animateMotion dur="7s" repeatCount="indefinite" path="M0,520 C300,500 500,420 720,330 S1150,140 1440,80"></animateMotion></g></svg>
 <div style="position: relative; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
@@ -309,7 +338,7 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </div>
 <script>
 (function () {
-  var a = 0, open = true, paused = false;
+  var a = 0, open = false, paused = false;
   var prog = [4, 27, 50, 74, 100];
   function mobile() { return window.innerWidth <= 760; }
   if (mobile()) paused = true;
@@ -356,18 +385,18 @@ a{color:#121417}a:hover{color:#8a6a3e}
     q('.st-barwrap').forEach(function (w) { var on = +w.dataset.i === a; w.hidden = !on; if (on) replay(w.querySelector('.st-progress')); });
     var wrap = document.getElementById('st-open'); if (wrap) wrap.hidden = !open;
     q('.st-panelwrap').forEach(function (w) { var on = open && +w.dataset.i === a; w.hidden = !on; if (on) replay(w.querySelector('.st-panel')); });
-    var p = document.getElementById('st-progress-path'); if (p) p.style.strokeDashoffset = String(100 - prog[a]);
+    var p = document.getElementById('st-progress-path'); if (p) p.style.strokeDashoffset = String(100 - prog[a]); q('.st-dot').forEach(function (d) { d.setAttribute('keyPoints', '0;' + prog[a] / 100); });
     place();
   }
   q('.st-tab').forEach(function (b) {
     b.addEventListener('click', function () {
       var i = +b.dataset.i;
-      if (open && i === a && paused) { open = false; } else { a = i; open = true; paused = true; }
+      if (open && i === a && paused && mobile()) { open = false; } else { a = i; open = mobile(); paused = true; }
       render();
       if (open) setTimeout(fit, 80);
     });
   });
-  setInterval(function () { if (!paused) { a = (a + 1) % 5; render(); } }, 6000);
+  setInterval(function () { if (!paused) { a = (a + 1) % 5; render(); } }, 3000);
   render();
 })();
 </script>

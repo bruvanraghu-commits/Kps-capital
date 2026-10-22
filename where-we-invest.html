@@ -159,19 +159,24 @@ a{color:#121417}a:hover{color:#8a6a3e}
 .ed-card:hover .ed-arrow{transform:translateX(4px)}
 .ed-btn:hover{color:#121417!important;background:#e8dcc6!important}
 @media (max-width: 900px){.ed-grid{grid-template-columns:1fr!important}.ed-heroimg{width:100%!important;opacity:.25}.ed-words{display:none!important}}
+.ed-grid[data-desc="off"] .ed-card p{display:none}
+.ed-grid[data-desc="off"] .ed-card h3{margin-bottom:0!important}
+.ed-grid[data-desc="off"]{gap:10px!important}
+.ed-grid[data-desc="off"] .ed-card{min-height:clamp(150px,12.5vw,200px)!important}
+.ed-grid[data-desc="off"] .ed-card > div:last-child{padding-top:clamp(16px,1.6vw,24px)!important;padding-bottom:clamp(16px,1.6vw,24px)!important}
+.ed-grid[data-desc="off"] .ed-card > div:last-child > div:first-child{margin-bottom:10px!important}
 </style>
 </head>
 <body>
 <div style="background: #ffffff; color: #121417; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: clip">
 <header class="kp-head" style="position: sticky; top: 0; z-index: 50; background: #ffffff; padding: 22px 0; border-bottom: 1px solid #ece6db">
 <div class="kp-bar" style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap">
-<a href="https://kpsanghvi.com/" style="display: flex; align-items: center; text-decoration: none">
+<a aria-label="Venture Capital home" href="index.html" style="display: flex; align-items: center; text-decoration: none">
 <img src="kps-logo.png" alt="KP Sanghvi, since 1965" class="kp-logo" style="width: 175px; height: auto; display: block">
 </a>
 <input type="checkbox" id="kpnav" class="kp-toggle" aria-label="Open menu">
 <label for="kpnav" class="kp-burger" aria-hidden="true"><span></span><span></span><span></span></label>
 <nav class="kp-nav" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap">
-<a href="index.html" style="font-size: 15px; font-weight: 400; text-decoration: none; padding: 12px 0">Venture Capital</a>
 <a href="where-we-invest.html" aria-current="page" style="font-size: 15px; font-weight: 500; text-decoration: none; padding: 12px 0 10px; border-bottom: 2px solid #a8834f">Where We Invest</a>
 <a href="stages-we-invest.html" style="font-size: 15px; font-weight: 400; text-decoration: none; padding: 12px 0">Stages We Invest</a>
 <a class="vc-btn vc-btn-dark" href="https://kpsanghvi.com/reach-out/" style="font-size: 14px; font-weight: 500; text-decoration: none; background: #121417; color: #ffffff; padding: 12px 24px; border-radius: 999px">Pitch to Us</a>
@@ -183,34 +188,33 @@ a{color:#121417}a:hover{color:#8a6a3e}
 
 
 
-<section style="position: relative; overflow: hidden; background: #ffffff; color: #121417; min-height: clamp(440px, 34vw, 600px); display: flex; align-items: center">
+<section style="position: relative; overflow: hidden; background: #ffffff; color: #121417; min-height: clamp(374px, 29vw, 510px); display: flex; align-items: center">
 <div class="ed-heroimg" aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 55%; background: url('images/wi-hero2.jpg') center 45% / cover no-repeat"></div>
 <div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; right: 0; width: 56%; background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.6) 18%, rgba(255,255,255,0) 42%)"></div>
 <div class="ed-words" aria-hidden="true" style="position: absolute; right: clamp(20px, 3vw, 56px); top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 14px; font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #ffffff; font-weight: 500; text-shadow: 0 1px 6px rgba(60,45,30,0.35)"><span>People</span><span>Ideas</span><span>Industries</span><span>For a brighter</span><span>tomorrow</span></div>
 <div style="position: relative; width: 100%; max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px; box-sizing: content-box">
-<div style="max-width: 520px; padding: clamp(40px, 5vw, 80px) 0">
+<div style="max-width: 520px; padding: clamp(34px, 4.25vw, 68px) 0">
 <div class="vc-rise" style="font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: #8a6a3e; font-weight: 500; margin-bottom: 18px">Investment Focus</div>
 <h1 class="vc-rise vc-d1" style="font-weight: 500; line-height: 1.02; letter-spacing: -0.02em; font-size: clamp(42px, 4.4vw, 80px); margin: 0 0 14px">Where We Invest</h1>
 <p class="vc-rise vc-d2" style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 400; font-size: clamp(26px, 2.4vw, 42px); line-height: 1.15; color: #7d7f84; margin: 0 0 26px">Backing ideas that shape what comes next.</p>
 <div class="vc-rise vc-d3" style="width: 120px; height: 1px; background: #cdb894; margin-bottom: 24px"></div>
-<p class="vc-rise vc-d3" style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #4a4d55; margin: 0; max-width: 30em">We invest across five sectors where innovation, changing customer needs and structural shifts create long-term opportunities.</p>
+<p class="vc-rise vc-d3" style="font-size: clamp(15px, 1.05vw, 18px); font-weight: 300; line-height: 1.7; color: #4a4d55; margin: 0; max-width: 30em">We invest where innovation, changing customer needs and structural shifts create lasting opportunities.</p>
 </div>
 </div>
 </section>
 <section style="background: #ffffff; color: #121417; padding: clamp(36px, 4vw, 64px) 0 clamp(44px, 4.6vw, 72px); border-top: 1px solid #ece6db">
 <div style="max-width: clamp(1200px, 78vw, 1680px); margin: 0 auto; padding: 0 24px">
 <div style="font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: #8a6a3e; font-weight: 500; margin-bottom: 12px">Our Investment Landscape</div>
-<h2 style="font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; font-size: clamp(30px, 2.8vw, 48px); margin: 0 0 clamp(24px, 2.6vw, 40px)">Five sectors. Distinct opportunities.</h2>
-<div class="ed-card" style="position: relative; overflow: hidden; min-height: clamp(260px, 22vw, 360px); background: #120f0c; display: flex; align-items: center; margin-bottom: 12px">
-<div class="ed-img" aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 78%; background: url('images/wi-lux2.jpg') 60% 55% / cover no-repeat"></div>
-<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(18,15,12,1) 0%, rgba(18,15,12,1) 26%, rgba(18,15,12,0.8) 38%, rgba(18,15,12,0.3) 54%, rgba(18,15,12,0) 68%)"></div>
-<div style="position: relative; max-width: 440px; padding: clamp(26px, 2.6vw, 40px)">
-<div style="display: flex; align-items: center; gap: 12px; font-size: 16px; color: #e8dcc6; margin-bottom: 16px"><span style="width: 48px; height: 1px; background: rgba(232,220,198,0.6)"></span></div>
-<h3 style="font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; font-size: clamp(28px, 2.4vw, 42px); margin: 0 0 14px; color: #ffffff">Luxury Fashion</h3>
-<p style="font-size: clamp(14px, 1vw, 17px); font-weight: 300; line-height: 1.6; color: #efe6d6; margin: 0">We back brands that pair real craft with a clear identity and a direct bond with their customers.</p>
+<h2 style="font-weight: 400; line-height: 1.1; letter-spacing: -0.015em; font-size: clamp(30px, 2.8vw, 48px); margin: 0 0 clamp(24px, 2.6vw, 40px)">Where we see opportunity</h2>
+<div class="ed-grid" data-desc="off" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"><div class="ed-card" style="position: relative; overflow: hidden; min-height: clamp(220px, 19vw, 300px); background: #f6f1e8; display: flex; align-items: stretch">
+<div class="ed-img" aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 58%; background: url('images/wi-lux2.jpg') 60% 55% / cover no-repeat"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #f6f1e8 0%, #f6f1e8 44%, rgba(246,241,232,0.8) 52%, rgba(246,241,232,0) 72%)"></div>
+<div style="position: relative; width: 46%; padding: clamp(22px, 2.2vw, 34px); display: flex; flex-direction: column; justify-content: center">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #8a6a3e; margin-bottom: 14px"><span style="width: 32px; height: 1px; background: #cdb894"></span></div>
+<h3 style="font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; font-size: clamp(22px, 1.8vw, 30px); margin: 0 0 12px; color: #121417">Luxury &amp; Lifestyle</h3>
+<p style="font-size: clamp(13px, 0.92vw, 15px); font-weight: 300; line-height: 1.6; color: #4a4d55; margin: 0">We back brands that pair real craft with a clear identity and a direct bond with their customers.</p>
 </div>
-</div>
-<div class="ed-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px"><div class="ed-card" style="position: relative; overflow: hidden; min-height: clamp(220px, 19vw, 300px); background: #f6f1e8; display: flex; align-items: stretch">
+</div><div class="ed-card" style="position: relative; overflow: hidden; min-height: clamp(220px, 19vw, 300px); background: #f6f1e8; display: flex; align-items: stretch">
 <div class="ed-img" aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 58%; background: url('images/wi-robo3.jpg') center / cover no-repeat"></div>
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #f6f1e8 0%, #f6f1e8 44%, rgba(246,241,232,0.8) 52%, rgba(246,241,232,0) 72%)"></div>
 <div style="position: relative; width: 46%; padding: clamp(22px, 2.2vw, 34px); display: flex; flex-direction: column; justify-content: center">
@@ -239,10 +243,35 @@ a{color:#121417}a:hover{color:#8a6a3e}
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #f6f1e8 0%, #f6f1e8 44%, rgba(246,241,232,0.8) 52%, rgba(246,241,232,0) 72%)"></div>
 <div style="position: relative; width: 46%; padding: clamp(22px, 2.2vw, 34px); display: flex; flex-direction: column; justify-content: center">
 <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #8a6a3e; margin-bottom: 14px"><span style="width: 32px; height: 1px; background: #cdb894"></span></div>
-<h3 style="font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; font-size: clamp(22px, 1.8vw, 30px); margin: 0 0 12px; color: #121417">TravelTech</h3>
+<h3 style="font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; font-size: clamp(22px, 1.8vw, 30px); margin: 0 0 12px; color: #121417">Mobility &amp; Logistics</h3>
 <p style="font-size: clamp(13px, 0.92vw, 15px); font-weight: 300; line-height: 1.6; color: #4a4d55; margin: 0">We back products that make travel more personal, seamless and rewarding.</p>
 </div>
+</div><div class="ed-card" style="position: relative; overflow: hidden; min-height: clamp(220px, 19vw, 300px); background: #f6f1e8; display: flex; align-items: stretch">
+<div class="ed-img" aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 58%; background: url('images/wi-ai.jpg') 55% 40% / cover no-repeat"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #f6f1e8 0%, #f6f1e8 44%, rgba(246,241,232,0.8) 52%, rgba(246,241,232,0) 72%)"></div>
+<div style="position: relative; width: 46%; padding: clamp(22px, 2.2vw, 34px); display: flex; flex-direction: column; justify-content: center">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #8a6a3e; margin-bottom: 14px"><span style="width: 32px; height: 1px; background: #cdb894"></span></div>
+<h3 style="font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; font-size: clamp(22px, 1.8vw, 30px); margin: 0 0 12px; color: #121417">Artificial Intelligence</h3>
+<p style="font-size: clamp(13px, 0.92vw, 15px); font-weight: 300; line-height: 1.6; color: #4a4d55; margin: 0">Investing in AI driven solutions that transform industries, augment human capability and unlock new business models.</p>
+</div>
+</div><div class="ed-card" style="position: relative; overflow: hidden; min-height: clamp(220px, 19vw, 300px); background: #f6f1e8; display: flex; align-items: stretch">
+<div class="ed-img" aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 58%; background: url('images/wi-energy.jpg') 78% 50% / cover no-repeat"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #f6f1e8 0%, #f6f1e8 44%, rgba(246,241,232,0.8) 52%, rgba(246,241,232,0) 72%)"></div>
+<div style="position: relative; width: 46%; padding: clamp(22px, 2.2vw, 34px); display: flex; flex-direction: column; justify-content: center">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #8a6a3e; margin-bottom: 14px"><span style="width: 32px; height: 1px; background: #cdb894"></span></div>
+<h3 style="font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; font-size: clamp(22px, 1.8vw, 30px); margin: 0 0 12px; color: #121417">Energy Transition</h3>
+<p style="font-size: clamp(13px, 0.92vw, 15px); font-weight: 300; line-height: 1.6; color: #4a4d55; margin: 0">Backing technologies and businesses that accelerate decarbonisation, renewable adoption and energy efficiency.</p>
+</div>
+</div><div class="ed-card" style="position: relative; overflow: hidden; min-height: clamp(220px, 19vw, 300px); background: #f6f1e8; display: flex; align-items: stretch">
+<div class="ed-img" aria-hidden="true" style="position: absolute; top: 0; right: 0; bottom: 0; width: 58%; background: url('images/wi-realestate.jpg') 50% 30% / cover no-repeat"></div>
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, #f6f1e8 0%, #f6f1e8 44%, rgba(246,241,232,0.8) 52%, rgba(246,241,232,0) 72%)"></div>
+<div style="position: relative; width: 46%; padding: clamp(22px, 2.2vw, 34px); display: flex; flex-direction: column; justify-content: center">
+<div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #8a6a3e; margin-bottom: 14px"><span style="width: 32px; height: 1px; background: #cdb894"></span></div>
+<h3 style="font-weight: 400; line-height: 1.15; letter-spacing: -0.01em; font-size: clamp(22px, 1.8vw, 30px); margin: 0 0 12px; color: #121417">Real Estate</h3>
+<p style="font-size: clamp(13px, 0.92vw, 15px); font-weight: 300; line-height: 1.6; color: #4a4d55; margin: 0">Exploring opportunities in next generation real estate, property technology and modern built environments.</p>
+</div>
 </div></div>
+
 </div>
 </section>
 <section style="position: relative; overflow: hidden; background: #141518; color: #ffffff; padding: clamp(44px, 4.6vw, 76px) 0">
