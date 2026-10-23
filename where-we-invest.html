@@ -325,7 +325,110 @@ a{color:#121417}a:hover{color:#8a6a3e}
 </div>
 </div>
 </footer>
+<div class="kp-pitch" id="kp-pitch" role="dialog" aria-modal="true" aria-labelledby="kp-pitch-title" hidden>
+<style>
+.kp-pitch{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box}
+.kp-pitch[hidden]{display:none!important}
+.kp-pitch-bg{position:absolute;inset:0;background:rgba(18,20,23,.55);backdrop-filter:blur(3px);animation:kpFade .3s ease both}
+.kp-pitch-box{position:relative;width:100%;max-width:760px;max-height:calc(100vh - 40px);overflow:auto;background:#ffffff;color:#121417;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.25);padding:clamp(28px,3.4vw,48px);box-sizing:border-box;animation:kpRise .45s cubic-bezier(.2,.7,.2,1) both;font-family:inherit}
+@keyframes kpFade{from{opacity:0}to{opacity:1}}
+@keyframes kpRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.kp-pitch-x{position:absolute;top:16px;right:16px;width:40px;height:40px;border-radius:50%;border:1px solid #e3d9c8;background:#ffffff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#121417}
+.kp-pitch-x:hover{border-color:#a8834f}
+.kp-pitch-eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#8a6a3e;font-weight:500;margin:0 0 12px}
+.kp-pitch h2{font-weight:400;font-size:clamp(28px,2.6vw,40px);line-height:1.1;letter-spacing:-.015em;margin:0 0 10px}
+.kp-pitch-lead{font-size:16px;font-weight:300;line-height:1.6;color:#4a4d55;margin:0 0 26px}
+.kp-pitch form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.kp-pitch .kp-full{grid-column:1 / -1}
+.kp-pitch input[type=text],.kp-pitch input[type=email],.kp-pitch input[type=tel],.kp-pitch textarea{width:100%;box-sizing:border-box;font:inherit;font-size:15px;font-weight:300;color:#121417;background:#ffffff;border:1px solid #e3d9c8;border-radius:2px;padding:13px 16px;outline:none;transition:border-color .2s ease}
+.kp-pitch textarea{min-height:120px;resize:vertical}
+.kp-pitch input:focus,.kp-pitch textarea:focus{border-color:#a8834f}
+.kp-pitch ::placeholder{color:#8a8c92}
+.kp-pitch-file{display:flex;flex-direction:column;justify-content:center;gap:6px;border:1px dashed #cdb894;background:#faf7f1;border-radius:2px;padding:14px 16px;cursor:pointer;min-height:100%;box-sizing:border-box}
+.kp-pitch-file input{position:absolute;width:1px;height:1px;opacity:0}
+.kp-pitch-file b{font-weight:500;font-size:14px;color:#121417;display:flex;align-items:center;gap:8px}
+.kp-pitch-file span{font-size:12px;color:#7d7f84}
+.kp-pitch-file.kp-has b{color:#8a6a3e}
+.kp-pitch-col{display:flex;flex-direction:column;gap:14px}
+.kp-pitch-err{grid-column:1 / -1;font-size:13px;color:#a2412f;min-height:0;margin:0}
+.kp-pitch-send{grid-column:1 / -1;justify-self:start;font:inherit;font-size:15px;font-weight:500;background:#121417;color:#ffffff;border:0;border-radius:999px;padding:15px 38px;cursor:pointer;margin-top:6px;transition:background .25s ease}
+.kp-pitch-send:hover{background:#a8834f}
+.kp-pitch-done{text-align:left}
+.kp-pitch-done[hidden]{display:none}
+@media (max-width:640px){.kp-pitch form{grid-template-columns:1fr}.kp-pitch-box{padding:28px 20px}}
+</style>
+<div class="kp-pitch-bg" data-kp-close></div>
+<div class="kp-pitch-box">
+<button type="button" class="kp-pitch-x" data-kp-close aria-label="Close"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+<div class="kp-pitch-main">
+<div class="kp-pitch-eyebrow">Pitch to Us</div>
+<h2 id="kp-pitch-title">We would love to hear from you.</h2>
+<p class="kp-pitch-lead">Share a few details about what you are building and our team will be in touch.</p>
+<form action="https://formsubmit.co/marketingkps0@gmail.com" method="POST" enctype="multipart/form-data" novalidate>
+<input type="hidden" name="_subject" value="New pitch: KP Sanghvi Venture Capital">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<input class="kp-full" type="text" name="Name" placeholder="Name" required autocomplete="name">
+<input class="kp-full" type="text" name="Company" placeholder="Company name" required autocomplete="organization">
+<textarea class="kp-full" name="What are you building" placeholder="What are you building (brief details)" required></textarea>
+<label class="kp-pitch-file"><input type="file" name="attachment" accept="application/pdf,.pdf"><b><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a8834f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"></path></svg><em style="font-style:normal">Upload pitch deck</em></b><span>PDF only, under 5 MB</span></label>
+<div class="kp-pitch-col">
+<input type="email" name="email" placeholder="Email ID" required autocomplete="email">
+<input type="tel" name="Contact number" placeholder="Contact number" autocomplete="tel">
+</div>
+<p class="kp-pitch-err" role="alert"></p>
+<button class="kp-pitch-send" type="submit">Submit pitch</button>
+</form>
+</div>
+<div class="kp-pitch-done" hidden>
+<div class="kp-pitch-eyebrow">Thank you</div>
+<h2>Your pitch is on its way.</h2>
+<p class="kp-pitch-lead" style="margin:0">Our team will review it and get back to you soon.</p>
+</div>
+</div>
 </div>
 
+</div>
+<script>
+(function () {
+  if (window.__kpPitch) return; window.__kpPitch = true;
+  function m() { return document.getElementById('kp-pitch'); }
+  function open(done) {
+    var d = m(); if (!d) return false;
+    d.querySelector('.kp-pitch-main').hidden = !!done;
+    d.querySelector('.kp-pitch-done').hidden = !done;
+    d.hidden = false; document.documentElement.style.overflow = 'hidden';
+    var f = d.querySelector('input[name="Name"]'); if (f && !done) setTimeout(function () { f.focus(); }, 60);
+    return true;
+  }
+  function close() { var d = m(); if (d) { d.hidden = true; document.documentElement.style.overflow = ''; } }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="reach-out"]');
+    if (a && open(false)) { e.preventDefault(); return; }
+    if (e.target.closest && e.target.closest('[data-kp-close]')) close();
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+  document.addEventListener('change', function (e) {
+    if (!e.target.matches || !e.target.matches('.kp-pitch input[type=file]')) return;
+    var f = e.target.files && e.target.files[0], lab = e.target.closest('.kp-pitch-file'), err = m().querySelector('.kp-pitch-err');
+    err.textContent = '';
+    if (f && (!/\.pdf$/i.test(f.name) || f.size > 5 * 1024 * 1024)) { err.textContent = 'Please upload a PDF under 5 MB.'; e.target.value = ''; f = null; }
+    lab.classList.toggle('kp-has', !!f);
+    lab.querySelector('em').textContent = f ? f.name : 'Upload pitch deck';
+  });
+  document.addEventListener('submit', function (e) {
+    var form = e.target; if (!form.closest || !form.closest('.kp-pitch')) return;
+    var err = form.querySelector('.kp-pitch-err'); err.textContent = '';
+    var bad = Array.prototype.filter.call(form.querySelectorAll('[required]'), function (i) { return !i.value.trim(); });
+    var em = form.querySelector('input[type=email]');
+    if (bad.length) { e.preventDefault(); err.textContent = 'Please fill in your name, company, what you are building and email.'; bad[0].focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim())) { e.preventDefault(); err.textContent = 'Please enter a valid email address.'; em.focus(); return; }
+    form.querySelector('input[name="_next"]').value = location.href.split('#')[0] + '#pitch-sent';
+    form.querySelector('.kp-pitch-send').textContent = 'Sending…';
+  });
+  if (location.hash === '#pitch-sent') { setTimeout(function () { open(true); history.replaceState(null, '', location.pathname + location.search); }, 300); }
+})();
+</script>
 </body>
 </html>
